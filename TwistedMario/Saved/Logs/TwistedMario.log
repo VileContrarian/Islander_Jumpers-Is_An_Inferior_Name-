@@ -1,4 +1,4 @@
-﻿Log file open, 01/24/19 15:19:07
+﻿Log file open, 01/24/19 15:46:11
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
@@ -10,7 +10,7 @@ LogInit: Display: Running engine for game: TwistedMario
 LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
 LogPlatformFile: Not using cached read wrapper
 LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 1.000878
+LogStats: Stats thread started at 0.828217
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: ICU TimeZone Detection - Raw Offset: -5:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -94,7 +94,7 @@ LogPluginManager: Mounting plugin RuntimePhysXCooking
 LogPluginManager: Mounting plugin SteamVR
 LogPluginManager: Mounting plugin WebMMoviePlayer
 LogPluginManager: Mounting plugin WindowsMoviePlayer
-LogStreaming: Display: Took  0.138s to configure plugins.
+LogStreaming: Display: Took  0.175s to configure plugins.
 LogInit: Using libcurl 7.55.1-DEV
 LogInit:  - built for x86_64-pc-win32
 LogInit:  - supports SSL with OpenSSL/1.0.2h
@@ -114,17 +114,17 @@ LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connecti
 LogInit:  - LocalHostAddr = Default
 LogInit:  - BufferSize = 65536
 LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
-LogInit: Build: ++UE4+Release-4.21-CL-4753647
-LogInit: Engine Version: 4.21.2-4753647+++UE4+Release-4.21
+LogInit: Build: ++UE4+Release-4.21-CL-4613538
+LogInit: Engine Version: 4.21.1-4613538+++UE4+Release-4.21
 LogInit: Compatible Engine Version: 4.21.0-4541578+++UE4+Release-4.21
 LogInit: Net CL: 4541578
-LogInit: OS: Windows 10 (), CPU: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz, GPU: Intel(R) HD Graphics 530
-LogInit: Compiled (64-bit): Jan 19 2019 02:07:31
+LogInit: OS: Windows 10 (), CPU: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, GPU: Intel(R) UHD Graphics 620
+LogInit: Compiled (64-bit): Nov 30 2018 04:13:25
 LogInit: Compiled with Visual C++: 19.13.26129.00
 LogInit: Build Configuration: Development
 LogInit: Branch Name: ++UE4+Release-4.21
 LogInit: Command Line: 
-LogInit: Base Directory: D:/Development/UREngine/Software/UE_4.21/Engine/Binaries/Win64/
+LogInit: Base Directory: C:/Users/jfine/Desktop/UE_4.21/Engine/Binaries/Win64/
 LogInit: Installed Engine Build: 1
 LogDevObjectVersion: Number of dev versions registered: 22
 LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
@@ -149,747 +149,445 @@ LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
 LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 17
 LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 4
 LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
-LogStreaming: Display: Took  0.000s to delete old logs.
+LogStreaming: Display: Took  0.001s to delete old logs.
 LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
 LogInit: Object subsystem initialized
 LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
 LogConfig: Setting CVar [[r.setres:1280x720]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[r.VSync:0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
-[2019.01.24-20.19.09:950][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:8388607]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.MergeGCClusters:0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
-[2019.01.24-20.19.09:950][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
-[2019.01.24-20.19.09:950][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
-[2019.01.24-20.19.09:953][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2019.01.24-20.19.09:953][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2019.01.24-20.19.09:954][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2019.01.24-20.19.09:954][  0]LogInit: Selected Device Profile: [Windows]
-[2019.01.24-20.19.09:954][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2019.01.24-20.19.09:988][  0]LogHAL: Display: Platform has ~ 16 GB [17072898048 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
-[2019.01.24-20.19.09:988][  0]LogConfig: Setting CVar [[r.Vulkan.UseRealUBs:1]]
-[2019.01.24-20.19.09:988][  0]LogInit: Going up to parent DeviceProfile []
-[2019.01.24-20.19.10:000][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2019.01.24-20.19.10:000][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2019.01.24-20.19.10:001][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
-[2019.01.24-20.19.10:027][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
-[2019.01.24-20.19.10:027][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
-[2019.01.24-20.19.10:027][  0]LogInit: Computer: DESKTOP-Q0BDHIK
-[2019.01.24-20.19.10:027][  0]LogInit: User: natha
-[2019.01.24-20.19.10:027][  0]LogInit: CPU Page size=4096, Cores=4
-[2019.01.24-20.19.10:027][  0]LogInit: High frequency timer resolution =2.531252 MHz
-[2019.01.24-20.19.10:027][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
-[2019.01.24-20.19.10:027][  0]LogMemory: Platform Memory Stats for Windows
-[2019.01.24-20.19.10:027][  0]LogMemory: Process Physical Memory: 101.40 MB used, 101.40 MB peak
-[2019.01.24-20.19.10:027][  0]LogMemory: Process Virtual Memory: 91.17 MB used, 91.17 MB peak
-[2019.01.24-20.19.10:027][  0]LogMemory: Physical Memory: 6300.39 MB used,  9981.59 MB free, 16281.98 MB total
-[2019.01.24-20.19.10:027][  0]LogMemory: Virtual Memory: 4647.92 MB used,  134213080.00 MB free, 134217728.00 MB total
-[2019.01.24-20.19.11:060][  0]LogInit: Using OS detected language (en-US).
-[2019.01.24-20.19.11:060][  0]LogInit: Using OS detected locale (en-CA).
-[2019.01.24-20.19.11:072][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
-[2019.01.24-20.19.12:092][  0]LogStreaming: Display: Took  1.032s to InitEngineTextLocalization.
-[2019.01.24-20.19.12:092][  0]LogInit: Setting process to per monitor DPI aware
-[2019.01.24-20.19.12:491][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
-[2019.01.24-20.19.12:491][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
-[2019.01.24-20.19.16:506][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.01.24-20.19.16:506][  0]LogD3D11RHI: D3D11 adapters:
-[2019.01.24-20.19.16:960][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 970M' (Feature Level 11_0)
-[2019.01.24-20.19.16:960][  0]LogD3D11RHI:       3040/0/8140 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
-[2019.01.24-20.19.16:969][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 530' (Feature Level 11_0)
-[2019.01.24-20.19.16:969][  0]LogD3D11RHI:       128/0/8140 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
-[2019.01.24-20.19.16:971][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
-[2019.01.24-20.19.16:971][  0]LogD3D11RHI:       0/0/8140 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
-[2019.01.24-20.19.16:971][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2019.01.24-20.19.17:010][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2019.01.24-20.19.17:010][  0]LogD3D11RHI:     GPU DeviceId: 0x13d8 (for the marketing name, search the web for "GPU Device Id")
-[2019.01.24-20.19.17:010][  0]LogWindows: EnumDisplayDevices:
-[2019.01.24-20.19.17:011][  0]LogWindows:    0. 'Intel(R) HD Graphics 530' (P:1 D:1)
-[2019.01.24-20.19.17:011][  0]LogWindows:    1. 'Intel(R) HD Graphics 530' (P:0 D:0)
-[2019.01.24-20.19.17:011][  0]LogWindows:    2. 'Intel(R) HD Graphics 530' (P:0 D:0)
-[2019.01.24-20.19.17:011][  0]LogWindows: DebugString: PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter FoundDriverCount:0 
-[2019.01.24-20.19.17:011][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 970M
-[2019.01.24-20.19.17:011][  0]LogD3D11RHI:   Driver Version: Unknown (internal:Unknown, unified:Unknown)
-[2019.01.24-20.19.17:011][  0]LogD3D11RHI:      Driver Date: Unknown
-[2019.01.24-20.19.17:011][  0]LogRHI: Texture pool is 2128 MB (70% of 3040 MB)
-[2019.01.24-20.19.17:051][  0]LogD3D11RHI: Async texture creation enabled
-[2019.01.24-20.19.17:076][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
-[2019.01.24-20.19.17:746][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
-[2019.01.24-20.19.17:788][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
-[2019.01.24-20.19.17:829][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
-[2019.01.24-20.19.17:885][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
-[2019.01.24-20.19.17:948][  0]LogTemp: Display: Loaded TP MacTargetPlatform
-[2019.01.24-20.19.17:997][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
-[2019.01.24-20.19.18:035][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
-[2019.01.24-20.19.18:078][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
-[2019.01.24-20.19.18:109][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:246][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.24-20.19.18:303][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
-[2019.01.24-20.19.18:511][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
-[2019.01.24-20.19.18:511][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
-[2019.01.24-20.19.18:557][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
-[2019.01.24-20.19.18:557][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
-[2019.01.24-20.19.18:593][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
-[2019.01.24-20.19.18:631][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
-[2019.01.24-20.19.18:671][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
-[2019.01.24-20.19.18:731][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
-[2019.01.24-20.19.18:822][  0]LogTemp: Display: Loaded TP LuminTargetPlatform
-[2019.01.24-20.19.18:822][  0]LogTemp: Display: Loaded TP LuminTargetPlatform
-[2019.01.24-20.19.18:822][  0]LogTargetPlatformManager: Display: Building Assets For Windows
-[2019.01.24-20.19.19:946][  0]LogShaderCompilers: Guid format shader working directory is -12 characters bigger than the processId version (C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Intermediate/Shaders/WorkingDirectory/3004/).
-[2019.01.24-20.19.19:946][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/natha/AppData/Local/Temp/UnrealShaderWorkingDir/84DAD1004B08D2C3982B86B02A396053/'.
-[2019.01.24-20.19.19:947][  0]LogXGEController: Cleaning working directory: C:/Users/natha/AppData/Local/Temp/UnrealXGEWorkingDir/
-[2019.01.24-20.19.19:947][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
-[2019.01.24-20.19.19:947][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
-[2019.01.24-20.19.19:947][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
-[2019.01.24-20.19.22:952][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
-[2019.01.24-20.19.23:153][  0]LogDerivedDataCache: Loaded boot cache 0.20s 71MB C:/Users/natha/AppData/Local/UnrealEngine/4.21/DerivedDataCache/Boot.ddc.
-[2019.01.24-20.19.23:153][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/natha/AppData/Local/UnrealEngine/4.21/DerivedDataCache/Boot.ddc
-[2019.01.24-20.19.23:153][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2019.01.24-20.19.23:153][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2019.01.24-20.19.23:153][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.01.24-20.19.23:153][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2019.01.24-20.19.23:220][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2019.01.24-20.19.23:220][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.01.24-20.19.23:220][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
-[2019.01.24-20.19.23:234][  0]LogDerivedDataCache: Using Local data cache path C:/Users/natha/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2019.01.24-20.19.23:234][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
-[2019.01.24-20.19.23:234][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
-[2019.01.24-20.19.23:268][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
-[2019.01.24-20.19.23:270][  0]LogSlate: Using FreeType 2.6.0
-[2019.01.24-20.19.23:320][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2019.01.24-20.19.23:885][  0]LogAssetRegistry: FAssetRegistry took 0.0358 seconds to start up
-[2019.01.24-20.19.24:270][  0]LogInit: Selected Device Profile: [Windows]
-[2019.01.24-20.19.25:649][  0]LogSimplygon: Simplygon DLL not present - disabling.
-[2019.01.24-20.19.25:907][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
-[2019.01.24-20.19.25:907][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
-[2019.01.24-20.19.25:936][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
-[2019.01.24-20.19.25:936][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
-[2019.01.24-20.19.26:053][  0]LogNetVersion: TwistedMario 1.0.0, NetCL: 4541578, EngineNetVer: 5, GameNetVer: 0 (Checksum: 1777631269)
-[2019.01.24-20.19.28:245][  0]LogPackageLocalizationCache: Processed 11 localized package path(s) for 2 prioritized culture(s) in 0.113748 seconds
-[2019.01.24-20.19.28:252][  0]LogUObjectArray: 39775 objects as part of root set at end of initial load.
-[2019.01.24-20.19.28:252][  0]LogUObjectAllocator: 6914656 out of 0 bytes used by permanent object pool.
-[2019.01.24-20.19.28:252][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2019.01.24-20.19.39:921][  0]LogTcpMessaging: Initializing TcpMessaging bridge
-[2019.01.24-20.19.39:978][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
-[2019.01.24-20.19.42:255][  0]SourceControl: Source control is disabled
-[2019.01.24-20.19.42:256][  0]SourceControl: Source control is disabled
-[2019.01.24-20.19.42:420][  0]SourceControl: Source control is disabled
-[2019.01.24-20.19.42:525][  0]SourceControl: Source control is disabled
-[2019.01.24-20.19.45:209][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
-[2019.01.24-20.19.45:540][  0]LogOcInput: OculusInput pre-init called
-[2019.01.24-20.19.45:976][  0]LogEngine: Initializing Engine...
-[2019.01.24-20.19.45:977][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.01.24-20.19.45:978][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
-[2019.01.24-20.19.45:978][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2019.01.24-20.19.45:978][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
-[2019.01.24-20.19.45:978][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2019.01.24-20.19.46:361][  0]LogInit: Initializing FReadOnlyCVARCache
-[2019.01.24-20.19.46:409][  0]LogAIModule: Creating AISystem for world Untitled
-[2019.01.24-20.19.46:422][  0]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2019.01.24-20.19.46:655][  0]LogInit: FAudioDevice initialized.
-[2019.01.24-20.19.46:656][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
-[2019.01.24-20.19.46:737][  0]LogDerivedDataCache: Saved boot cache 0.08s 71MB C:/Users/natha/AppData/Local/UnrealEngine/4.21/DerivedDataCache/Boot.ddc.
-[2019.01.24-20.19.46:742][  0]LogInit: Texture streaming: Enabled
-[2019.01.24-20.19.46:858][  0]LogEngineSessionManager: EngineSessionManager initialized
-[2019.01.24-20.19.46:905][  0]LogInit: Transaction tracking system initialized
-[2019.01.24-20.19.47:160][  0]BlueprintLog: New page: Editor Load
-[2019.01.24-20.19.48:615][  0]LocalizationService: Localization service is disabled
-[2019.01.24-20.19.48:893][  0]LogConfig: Warning: Failed to saved backup for config[C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Intermediate/Config/CoalescedSourceConfigs/Engine.ini]
-[2019.01.24-20.19.49:009][  0]LogAssetRegistry: Error: Failed to open file for write C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Intermediate/CachedAssetRegistry.bin
-[2019.01.24-20.19.49:010][  0]LogConfig: Warning: Failed to saved backup for config[C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Intermediate/Config/CoalescedSourceConfigs/Engine.ini]
-[2019.01.24-20.19.50:671][  0]LogAutoReimportManager: Warning: Unable to watch directory C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Content/ as it doesn't exist.
-[2019.01.24-20.19.50:681][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
-[2019.01.24-20.19.50:681][  0]LogCook: Display: Mobile HDR setting 1
-[2019.01.24-20.19.50:681][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
-[2019.01.24-20.19.50:681][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
-[2019.01.24-20.19.50:681][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2019.01.24-20.19.50:681][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
-[2019.01.24-20.19.50:681][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2019.01.24-20.19.52:761][  0]SourceControl: Source control is disabled
-[2019.01.24-20.19.52:761][  0]Cmd: MAP LOAD FILE="../../../Engine/Content/Maps/Templates/Template_Default.umap" TEMPLATE=1 SHOWPROGRESS=1 FEATURELEVEL=3
-[2019.01.24-20.19.52:761][  0]LightingResults: New page: Lighting Build
-[2019.01.24-20.19.52:764][  0]MapCheck: New page: Map Check
-[2019.01.24-20.19.52:764][  0]LightingResults: New page: Lighting Build
-[2019.01.24-20.19.53:520][  0]LogAIModule: Creating AISystem for world Untitled_1
-[2019.01.24-20.19.53:540][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2019.01.24-20.19.53:569][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2019.01.24-20.19.53:570][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.234ms to complete.
-[2019.01.24-20.19.53:570][  0]LogFileHelpers: Loading map 'Template_Default' took 0.809
-[2019.01.24-20.19.53:726][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.01.24-20.19.53:734][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.01.24-20.19.53:741][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.01.24-20.19.53:750][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.01.24-20.19.53:787][  0]LogCollectionManager: Loaded 0 collections in 0.000833 seconds
-[2019.01.24-20.19.53:816][  0]LogFileCache: Scanning file cache for directory 'C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Saved/Collections/' took 0.01s
-[2019.01.24-20.19.53:816][  0]LogFileCache: Scanning file cache for directory 'C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Content/Developers/natha/Collections/' took 0.01s
-[2019.01.24-20.19.53:816][  0]LogFileCache: Scanning file cache for directory 'C:/Users/natha/Documents/GitHub/Twisted-Mario/TwistedMario/Content/Collections/' took 0.00s
-[2019.01.24-20.19.53:816][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
-[2019.01.24-20.19.53:826][  0]LogContentBrowser: Native class hierarchy populated in 0.0100 seconds. Added 2651 classes and 620 folders.
-[2019.01.24-20.19.53:831][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0002 seconds. Added 0 classes and 0 folders.
-[2019.01.24-20.19.53:858][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:875][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:901][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:907][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:914][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:921][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:927][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:934][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:940][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:948][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:954][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:960][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:967][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:973][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:979][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.53:987][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.54:025][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.54:032][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.54:038][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.54:045][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.54:095][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.54:102][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.54:109][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.54:118][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.54:127][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.54:134][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.01.24-20.19.54:616][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0002 seconds. Added 0 classes and 0 folders.
-[2019.01.24-20.19.54:670][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0003 seconds. Added 1 classes and 2 folders.
-[2019.01.24-20.19.54:709][  0]LogSlate: Took 0.018914 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
-[2019.01.24-20.19.54:722][  0]LogSlate: Took 0.010470 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
-[2019.01.24-20.19.54:744][  0]LogSlate: Took 0.016689 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
-[2019.01.24-20.19.54:951][  0]LogRenderer: Reallocating scene render targets to support 1208x576 Format 10 NumSamples 1 (Frame:1).
-[2019.01.24-20.19.55:207][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0002 seconds. Added 0 classes and 0 folders.
-[2019.01.24-20.19.55:207][  0]LogLoad: (Engine Initialization) Total time: 56.20 seconds
-[2019.01.24-20.19.55:207][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
-[2019.01.24-20.19.55:302][  0]LogContentStreaming: Texture pool size now 1000 MB
-[2019.01.24-20.19.55:347][  1]LogAssetRegistry: Asset discovery search completed in 31.4852 seconds
-[2019.01.24-20.19.55:350][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
-[2019.01.24-20.19.55:350][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000068 seconds (updated 0 objects)
-[2019.01.24-20.28.43:548][576]LogSlate: Window 'TwistedMario - Unreal Editor' being destroyed
-[2019.01.24-20.28.43:732][577]Cmd: QUIT_EDITOR
-[2019.01.24-20.28.43:761][577]LogExit: Preparing to exit.
-[2019.01.24-20.28.44:275][577]LogExit: Editor shut down
-[2019.01.24-20.28.44:276][577]LogExit: Transaction tracking system shut down
-[2019.01.24-20.28.44:448][577]LogExit: Object subsystem successfully closed.
-[2019.01.24-20.28.44:472][577]LogShaderCompilers: Display: Shaders left to compile 0
-[2019.01.24-20.28.44:475][577]LogD3D11RHI: Shutdown
-[2019.01.24-20.28.44:475][577]LogD3D11RHI: CleanupD3DDevice
-[2019.01.24-20.28.44:476][577]LogD3D11RHI: ~FD3D11DynamicRHI
-[2019.01.24-20.28.44:496][577]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (624)
-[2019.01.24-20.28.44:496][577]LogModuleManager: Shutting down and abandoning module SceneOutliner (622)
-[2019.01.24-20.28.44:496][577]LogModuleManager: Shutting down and abandoning module AddContentDialog (620)
-[2019.01.24-20.28.44:497][577]LogModuleManager: Shutting down and abandoning module WidgetCarousel (619)
-[2019.01.24-20.28.44:497][577]LogModuleManager: Shutting down and abandoning module EditorWidgets (616)
-[2019.01.24-20.28.44:497][577]LogModuleManager: Shutting down and abandoning module CollectionManager (614)
-[2019.01.24-20.28.44:497][577]LogModuleManager: Shutting down and abandoning module HierarchicalLODUtilities (612)
-[2019.01.24-20.28.44:497][577]LogModuleManager: Shutting down and abandoning module StatsViewer (610)
-[2019.01.24-20.28.44:497][577]LogModuleManager: Shutting down and abandoning module FoliageEdit (608)
-[2019.01.24-20.28.44:497][577]LogModuleManager: Shutting down and abandoning module LandscapeEditor (606)
-[2019.01.24-20.28.44:497][577]LogModuleManager: Shutting down and abandoning module MeshPaintMode (604)
-[2019.01.24-20.28.44:497][577]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (602)
-[2019.01.24-20.28.44:497][577]LogModuleManager: Shutting down and abandoning module ActorPickerMode (600)
-[2019.01.24-20.28.44:497][577]LogModuleManager: Shutting down and abandoning module GeometryMode (598)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module TextureAlignMode (596)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module BspMode (594)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (592)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (590)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module AutomationWorker (588)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (586)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (584)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (582)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module PlacementMode (581)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module MaterialEditor (580)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (576)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (574)
-[2019.01.24-20.28.44:498][577]LogModuleManager: Shutting down and abandoning module WebMMediaFactory (572)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module WebMMediaEditor (570)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module WebMMedia (568)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (566)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (564)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module SequenceRecorder (563)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (560)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (558)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (556)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (554)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (552)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (550)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (548)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module MagicLeapCameraPreviewFactory (546)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module MagicLeapMediaFactory (544)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module MagicLeapMediaEditor (542)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module CharacterAI (540)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module SmartSnapping (538)
-[2019.01.24-20.28.44:499][577]LogModuleManager: Shutting down and abandoning module SessionServices (536)
-[2019.01.24-20.28.44:500][577]LogModuleManager: Shutting down and abandoning module ViewportSnapping (534)
-[2019.01.24-20.28.44:500][577]LogModuleManager: Shutting down and abandoning module ViewportInteraction (532)
-[2019.01.24-20.28.44:500][577]LogModuleManager: Shutting down and abandoning module ClothPainter (530)
-[2019.01.24-20.28.44:500][577]LogModuleManager: Shutting down and abandoning module SkeletalMeshEditor (529)
-[2019.01.24-20.28.44:500][577]LogModuleManager: Shutting down and abandoning module LogVisualizer (526)
-[2019.01.24-20.28.44:500][577]LogModuleManager: Shutting down and abandoning module IntroTutorials (524)
-[2019.01.24-20.28.44:500][577]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (523)
-[2019.01.24-20.28.44:500][577]LogModuleManager: Shutting down and abandoning module LuminPlatformEditor (520)
-[2019.01.24-20.28.44:500][577]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (518)
-[2019.01.24-20.28.44:500][577]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (516)
-[2019.01.24-20.28.44:500][577]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (514)
-[2019.01.24-20.28.44:500][577]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (513)
-[2019.01.24-20.28.45:669][577]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (510)
-[2019.01.24-20.28.45:669][577]LogModuleManager: Shutting down and abandoning module LuminRuntimeSettings (508)
-[2019.01.24-20.28.45:669][577]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (506)
-[2019.01.24-20.28.45:669][577]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (504)
-[2019.01.24-20.28.45:669][577]LogModuleManager: Shutting down and abandoning module TimeManagementEditor (502)
-[2019.01.24-20.28.45:669][577]LogModuleManager: Shutting down and abandoning module InputBindingEditor (500)
-[2019.01.24-20.28.45:669][577]LogModuleManager: Shutting down and abandoning module MergeActors (498)
-[2019.01.24-20.28.45:669][577]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (496)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module LocalizationService (495)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module HardwareTargeting (492)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (490)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module UndoHistory (488)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module XmlParser (486)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module Blutility (484)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (482)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (481)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (478)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module SettingsEditor (476)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module ProjectLauncher (474)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module SessionFrontend (472)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module ProfilerClient (470)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module DeviceManager (468)
-[2019.01.24-20.28.45:670][577]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (467)
-[2019.01.24-20.28.45:723][577]LogModuleManager: Shutting down and abandoning module AutomationController (464)
-[2019.01.24-20.28.45:723][577]LogModuleManager: Shutting down and abandoning module AutomationWindow (462)
-[2019.01.24-20.28.45:723][577]LogModuleManager: Shutting down and abandoning module Layers (460)
-[2019.01.24-20.28.45:723][577]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (458)
-[2019.01.24-20.28.45:723][577]LogModuleManager: Shutting down and abandoning module DetailCustomizations (456)
-[2019.01.24-20.28.45:723][577]LogModuleManager: Shutting down and abandoning module PackagesDialog (454)
-[2019.01.24-20.28.45:723][577]LogModuleManager: Shutting down and abandoning module Persona (452)
-[2019.01.24-20.28.45:723][577]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (451)
-[2019.01.24-20.28.45:723][577]LogModuleManager: Shutting down and abandoning module AnimGraph (449)
-[2019.01.24-20.28.45:723][577]LogModuleManager: Shutting down and abandoning module Kismet (446)
-[2019.01.24-20.28.45:723][577]LogModuleManager: Shutting down and abandoning module GraphEditor (444)
-[2019.01.24-20.28.45:723][577]LogModuleManager: Shutting down and abandoning module ClassViewer (442)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module Toolbox (440)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module ModuleUI (438)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module MovieSceneTools (436)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module OutputLog (434)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module GammaUI (432)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module Documentation (430)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (428)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module MovieScene (426)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (424)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module LauncherPlatform (422)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module AnalyticsET (420)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module PortalServices (418)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module PortalRpc (416)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module MessagingRpc (414)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module AIModule (412)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module GameplayDebugger (411)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module AITestSuite (409)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module NavigationSystem (407)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module DesktopPlatform (404)
-[2019.01.24-20.28.45:724][577]LogModuleManager: Shutting down and abandoning module ImageWriteQueue (402)
-[2019.01.24-20.28.45:727][577]LogModuleManager: Shutting down and abandoning module ProfilerService (400)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module TaskGraph (398)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module SteamVRController (396)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (394)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (392)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module OculusInput (390)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (388)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module EditableMesh (386)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (384)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module CableComponent (382)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module AudioCapture (380)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (378)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module AndroidPermission (376)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module NUTUnrealEngine4 (374)
-[2019.01.24-20.28.45:904][577]LogModuleManager: Shutting down and abandoning module NetcodeUnitTest (372)
-[2019.01.24-20.28.45:905][577]LogModuleManager: Shutting down and abandoning module MediaCompositing (370)
-[2019.01.24-20.28.45:905][577]LogModuleManager: Shutting down and abandoning module LinearTimecode (368)
-[2019.01.24-20.28.45:905][577]LogModuleManager: Shutting down and abandoning module ImgMedia (366)
-[2019.01.24-20.28.45:908][577]LogModuleManager: Shutting down and abandoning module HTML5Networking (364)
-[2019.01.24-20.28.45:908][577]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (362)
-[2019.01.24-20.28.45:908][577]LogModuleManager: Shutting down and abandoning module GeometryCacheSequencer (360)
-[2019.01.24-20.28.45:908][577]LogModuleManager: Shutting down and abandoning module BackChannel (358)
-[2019.01.24-20.28.45:908][577]LogModuleManager: Shutting down and abandoning module AppleVision (356)
-[2019.01.24-20.28.45:908][577]LogModuleManager: Shutting down and abandoning module AppleImageUtilsBlueprintSupport (354)
-[2019.01.24-20.28.45:908][577]LogModuleManager: Shutting down and abandoning module AppleImageUtils (352)
-[2019.01.24-20.28.45:908][577]LogModuleManager: Shutting down and abandoning module AlembicImporter (350)
-[2019.01.24-20.28.45:908][577]LogModuleManager: Shutting down and abandoning module AlembicLibrary (349)
-[2019.01.24-20.28.45:908][577]LogModuleManager: Shutting down and abandoning module GeometryCache (348)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (347)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module VariantManagerContent (342)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module DatasmithContentEditor (340)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (338)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module PluginBrowser (336)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (334)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module PolygonModeling (332)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module MeshEditor (330)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (328)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module CryptoKeys (326)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (324)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (322)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module UObjectPlugin (320)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (318)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (316)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module GitSourceControl (314)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module SourceControl (313)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (310)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module ActorLayerUtilitiesEditor (308)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module ActorLayerUtilities (306)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (304)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (302)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (300)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module Paper2DEditor (298)
-[2019.01.24-20.28.45:909][577]LogModuleManager: Shutting down and abandoning module MeshPaint (297)
-[2019.01.24-20.28.45:910][577]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (294)
-[2019.01.24-20.28.45:910][577]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (292)
-[2019.01.24-20.28.45:910][577]LogModuleManager: Shutting down and abandoning module PhysXVehicles (290)
-[2019.01.24-20.28.45:910][577]LogModuleManager: Shutting down and abandoning module OculusEditor (288)
-[2019.01.24-20.28.45:910][577]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (286)
-[2019.01.24-20.28.45:910][577]LogModuleManager: Shutting down and abandoning module ActorSequence (284)
-[2019.01.24-20.28.45:910][577]LogModuleManager: Shutting down and abandoning module UdpMessaging (282)
-[2019.01.24-20.28.46:011][577]LogModuleManager: Shutting down and abandoning module TcpMessaging (280)
-[2019.01.24-20.28.46:112][577]LogModuleManager: Shutting down and abandoning module MagicLeapAudio (278)
-[2019.01.24-20.28.46:112][577]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (276)
-[2019.01.24-20.28.46:112][577]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (274)
-[2019.01.24-20.28.46:112][577]LogModuleManager: Shutting down and abandoning module FacialAnimation (272)
-[2019.01.24-20.28.46:112][577]LogModuleManager: Shutting down and abandoning module DataValidation (270)
-[2019.01.24-20.28.46:112][577]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (268)
-[2019.01.24-20.28.46:112][577]LogModuleManager: Shutting down and abandoning module LevelEditor (267)
-[2019.01.24-20.28.46:113][577]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (266)
-[2019.01.24-20.28.46:113][577]LogModuleManager: Shutting down and abandoning module CommonMenuExtensions (264)
-[2019.01.24-20.28.46:113][577]LogModuleManager: Shutting down and abandoning module MainFrame (262)
-[2019.01.24-20.28.46:113][577]LogModuleManager: Shutting down and abandoning module HotReload (261)
-[2019.01.24-20.28.46:113][577]LogModuleManager: Shutting down and abandoning module ContentBrowser (257)
-[2019.01.24-20.28.46:114][577]LogModuleManager: Shutting down and abandoning module TreeMap (255)
-[2019.01.24-20.28.46:114][577]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (252)
-[2019.01.24-20.28.46:114][577]LogModuleManager: Shutting down and abandoning module AISupportModule (250)
-[2019.01.24-20.28.46:114][577]LogModuleManager: Shutting down and abandoning module Paper2D (248)
-[2019.01.24-20.28.46:114][577]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (246)
-[2019.01.24-20.28.46:114][577]LogModuleManager: Shutting down and abandoning module WebMMoviePlayer (244)
-[2019.01.24-20.28.46:114][577]LogModuleManager: Shutting down and abandoning module WmfMedia (242)
-[2019.01.24-20.28.46:116][577]LogModuleManager: Shutting down and abandoning module Media (241)
-[2019.01.24-20.28.46:122][577]LogModuleManager: Shutting down and abandoning module PacketHandler (238)
-[2019.01.24-20.28.46:122][577]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (236)
-[2019.01.24-20.28.46:122][577]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntime (234)
-[2019.01.24-20.28.46:122][577]LogModuleManager: Shutting down and abandoning module MediaAssets (232)
-[2019.01.24-20.28.46:122][577]LogModuleManager: Shutting down and abandoning module Overlay (230)
-[2019.01.24-20.28.46:122][577]LogModuleManager: Shutting down and abandoning module OverlayEditor (229)
-[2019.01.24-20.28.46:122][577]LogModuleManager: Shutting down and abandoning module VREditor (226)
-[2019.01.24-20.28.46:122][577]LogModuleManager: Shutting down and abandoning module StringTableEditor (224)
-[2019.01.24-20.28.46:122][577]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (222)
-[2019.01.24-20.28.46:122][577]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (220)
-[2019.01.24-20.28.46:122][577]LogModuleManager: Shutting down and abandoning module FunctionalTesting (218)
-[2019.01.24-20.28.46:122][577]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (216)
-[2019.01.24-20.28.46:123][577]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (215)
-[2019.01.24-20.28.46:123][577]LogModuleManager: Shutting down and abandoning module UMG (212)
-[2019.01.24-20.28.46:123][577]LogModuleManager: Shutting down and abandoning module UMGEditor (211)
-[2019.01.24-20.28.46:123][577]LogModuleManager: Shutting down and abandoning module Sequencer (210)
-[2019.01.24-20.28.46:123][577]LogModuleManager: Shutting down and abandoning module MessageLog (207)
-[2019.01.24-20.28.46:123][577]LogModuleManager: Shutting down and abandoning module SlateReflector (202)
-[2019.01.24-20.28.46:123][577]LogModuleManager: Shutting down and abandoning module Slate (200)
-[2019.01.24-20.28.46:123][577]LogModuleManager: Shutting down and abandoning module EditorStyle (198)
-[2019.01.24-20.28.46:124][577]LogModuleManager: Shutting down and abandoning module MRMesh (196)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (194)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (192)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module XAudio2 (190)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module Networking (188)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module Core (186)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module LevelSequence (184)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module KismetCompiler (182)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module MeshUtilities (180)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (179)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (178)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module SimplygonSwarm (177)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module ProxyLODMeshReduction (175)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module SimplygonMeshReduction (173)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (171)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module MaterialBaking (167)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (163)
-[2019.01.24-20.28.46:125][577]LogModuleManager: Shutting down and abandoning module DerivedDataCache (160)
-[2019.01.24-20.28.46:154][577]LogDerivedDataCache: Shutdown
-[2019.01.24-20.28.46:154][577]LogModuleManager: Shutting down and abandoning module XGEController (158)
-[2019.01.24-20.28.46:154][577]LogXGEController: Cleaning working directory: C:/Users/natha/AppData/Local/Temp/UnrealXGEWorkingDir/
-[2019.01.24-20.28.46:154][577]LogModuleManager: Shutting down and abandoning module TargetPlatform (156)
-[2019.01.24-20.28.46:154][577]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (155)
-[2019.01.24-20.28.46:154][577]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (153)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (151)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (149)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (147)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (145)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (143)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (141)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (139)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (137)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module ImageWrapper (136)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (133)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (131)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (129)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (127)
-[2019.01.24-20.28.46:155][577]LogModuleManager: Shutting down and abandoning module LuminTargetPlatform (125)
-[2019.01.24-20.28.46:156][577]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (123)
-[2019.01.24-20.28.46:156][577]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (121)
-[2019.01.24-20.28.46:156][577]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (119)
-[2019.01.24-20.28.46:156][577]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (117)
-[2019.01.24-20.28.46:156][577]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (115)
-[2019.01.24-20.28.46:156][577]LogModuleManager: Shutting down and abandoning module Messaging (113)
-[2019.01.24-20.28.46:156][577]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (111)
-[2019.01.24-20.28.46:157][577]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (109)
-[2019.01.24-20.28.46:157][577]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (107)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (105)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (103)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (101)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (99)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (97)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (95)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (93)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (91)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (89)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module InputCore (86)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module Settings (84)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module PhysXCooking (82)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module SteamVR (80)
-[2019.01.24-20.28.46:163][577]LogHMD: Freeing OpenVRDLLHandle.
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module OculusHMD (78)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (76)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module LauncherChunkInstaller (74)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (72)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (68)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module XMPP (63)
-[2019.01.24-20.28.46:163][577]LogModuleManager: Shutting down and abandoning module WebSockets (62)
-[2019.01.24-20.28.46:196][577]LogModuleManager: Shutting down and abandoning module HTTP (59)
-[2019.01.24-20.28.46:197][577]LogHttp: Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
-[2019.01.24-20.28.46:197][577]LogHttp: Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65BDDFC3-45F7-CB9B-6FD5-1FB9938DE89C%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.21.2-4753647%2B%2B%2BUE4%2BRelease-4.21&UserID=a221b2f84600e0ffd2ed1e9c47200de7%7Cafb0113ceeeb4a8386c4f7b35a90e63c%7C79818951-46ee-45dc-8409-9b17caead8d9&AppEnvironment=datacollector-binary&UploadType=eteventstream] status=Processing
-[2019.01.24-20.28.46:201][577]LogModuleManager: Shutting down and abandoning module SSL (58)
-[2019.01.24-20.28.46:202][577]LogModuleManager: Shutting down and abandoning module MagicLeapIdentity (54)
-[2019.01.24-20.28.46:202][577]LogModuleManager: Shutting down and abandoning module MagicLeapHelperVulkan (52)
-[2019.01.24-20.28.46:202][577]LogModuleManager: Shutting down and abandoning module MagicLeapHelperOpenGL (50)
-[2019.01.24-20.28.46:202][577]LogModuleManager: Shutting down and abandoning module MagicLeapSecureStorage (48)
-[2019.01.24-20.28.46:202][577]LogModuleManager: Shutting down and abandoning module MagicLeapHandTracking (46)
-[2019.01.24-20.28.46:202][577]LogModuleManager: Shutting down and abandoning module MagicLeapEyeTracker (44)
-[2019.01.24-20.28.46:202][577]LogModuleManager: Shutting down and abandoning module MagicLeapController (42)
-[2019.01.24-20.28.46:203][577]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
-[2019.01.24-20.28.46:203][577]LogModuleManager: Shutting down and abandoning module MagicLeap (40)
-[2019.01.24-20.28.46:203][577]LogModuleManager: Shutting down and abandoning module DatasmithContent (38)
-[2019.01.24-20.28.46:203][577]LogModuleManager: Shutting down and abandoning module AnimationModifiers (36)
-[2019.01.24-20.28.46:203][577]LogModuleManager: Shutting down and abandoning module PropertyEditor (35)
-[2019.01.24-20.28.46:203][577]LogModuleManager: Shutting down and abandoning module AudioEditor (32)
-[2019.01.24-20.28.46:203][577]LogModuleManager: Shutting down and abandoning module TextureCompressor (30)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module ShaderCore (28)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module Landscape (26)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (24)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module OpenGLDrv (22)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module D3D11RHI (20)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (18)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module Renderer (16)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module Engine (14)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module CoreUObject (12)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module NetworkFile (10)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (8)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module StreamingFile (6)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module SandboxFile (4)
-[2019.01.24-20.28.46:204][577]LogModuleManager: Shutting down and abandoning module PakFile (2)
-[2019.01.24-20.28.46:211][577]LogExit: Exiting.
-[2019.01.24-20.28.46:227][577]Log file closed, 01/24/19 15:28:46
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
+[2019.01.24-20.46.12:796][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:8388607]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.MergeGCClusters:0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2019.01.24-20.46.12:796][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
+[2019.01.24-20.46.12:796][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
+[2019.01.24-20.46.12:804][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.01.24-20.46.12:805][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.01.24-20.46.12:806][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.01.24-20.46.12:807][  0]LogInit: Selected Device Profile: [Windows]
+[2019.01.24-20.46.12:807][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2019.01.24-20.46.12:830][  0]LogHAL: Display: Platform has ~ 12 GB [12710662144 / 17179869184 / 12], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2019.01.24-20.46.12:831][  0]LogConfig: Setting CVar [[r.Vulkan.UseRealUBs:1]]
+[2019.01.24-20.46.12:831][  0]LogInit: Going up to parent DeviceProfile []
+[2019.01.24-20.46.12:831][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@2] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:831][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.01.24-20.46.12:831][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:0.8]]
+[2019.01.24-20.46.12:831][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@2] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:831][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:3]]
+[2019.01.24-20.46.12:831][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@2] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:831][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.01.24-20.46.12:831][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.01.24-20.46.12:831][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:4]]
+[2019.01.24-20.46.12:831][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:1024]]
+[2019.01.24-20.46.12:831][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.01.24-20.46.12:831][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.04]]
+[2019.01.24-20.46.12:831][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:0.85]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:0.8]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:0.5]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.AOQuality:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:16]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:64]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@2] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:3]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.6]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.5]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:3]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Upscale.Quality:2]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:0.8]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:0        ; lower gathering accumulator quality]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:2          ; Max3x3 postfilering method]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:1    ; no background occlusion]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:0      ; no bokeh simulation when scattering]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.04        ; only a maximum of 4% of scattered bokeh]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:0                ; no slight out of focus]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:0                ; faster temporal accumulation]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.012   ; required because of AccumulatorQuality=0]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.012   ; required because of AccumulatorQuality=0]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Applying CVar settings from Section [TextureQuality@2] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:4]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:800]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@2] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:48]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.SSR.Quality:2]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.SceneColorFormat:3]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.DetailMode:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.SSS.Quality:-1]]
+[2019.01.24-20.46.12:832][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.01.24-20.46.12:833][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:0.5]]
+[2019.01.24-20.46.12:833][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:1]]
+[2019.01.24-20.46.12:833][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@2] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Scalability.ini]
+[2019.01.24-20.46.12:833][  0]LogConfig: Setting CVar [[foliage.DensityScale:0.8]]
+[2019.01.24-20.46.12:833][  0]LogConfig: Setting CVar [[grass.DensityScale:0.8]]
+[2019.01.24-20.46.12:833][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2019.01.24-20.46.12:839][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2019.01.24-20.46.12:840][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Config/Windows/Engine.ini]
+[2019.01.24-20.46.12:841][  0]LogInit: Computer: DESKTOP-KQUCEOV
+[2019.01.24-20.46.12:841][  0]LogInit: User: jfine
+[2019.01.24-20.46.12:841][  0]LogInit: CPU Page size=4096, Cores=4
+[2019.01.24-20.46.12:841][  0]LogInit: High frequency timer resolution =1.945314 MHz
+[2019.01.24-20.46.12:842][  0]LogMemory: Memory total: Physical=11.8GB (12GB approx)
+[2019.01.24-20.46.12:842][  0]LogMemory: Platform Memory Stats for Windows
+[2019.01.24-20.46.12:842][  0]LogMemory: Process Physical Memory: 101.72 MB used, 101.72 MB peak
+[2019.01.24-20.46.12:842][  0]LogMemory: Process Virtual Memory: 91.95 MB used, 91.95 MB peak
+[2019.01.24-20.46.12:842][  0]LogMemory: Physical Memory: 7143.68 MB used,  4978.15 MB free, 12121.83 MB total
+[2019.01.24-20.46.12:842][  0]LogMemory: Virtual Memory: 4652.73 MB used,  134213072.00 MB free, 134217728.00 MB total
+[2019.01.24-20.46.13:110][  0]LogInit: Using OS detected language (en-US).
+[2019.01.24-20.46.13:110][  0]LogInit: Using OS detected locale (en-US).
+[2019.01.24-20.46.13:111][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2019.01.24-20.46.13:727][  0]LogStreaming: Display: Took  0.617s to InitEngineTextLocalization.
+[2019.01.24-20.46.13:728][  0]LogInit: Setting process to per monitor DPI aware
+[2019.01.24-20.46.13:872][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2019.01.24-20.46.13:872][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2019.01.24-20.46.16:988][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.01.24-20.46.16:988][  0]LogD3D11RHI: D3D11 adapters:
+[2019.01.24-20.46.17:027][  0]LogD3D11RHI:    0. 'Intel(R) UHD Graphics 620' (Feature Level 11_0)
+[2019.01.24-20.46.17:027][  0]LogD3D11RHI:       128/0/6060 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x8086
+[2019.01.24-20.46.17:030][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2019.01.24-20.46.17:030][  0]LogD3D11RHI:       0/0/6060 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2019.01.24-20.46.17:030][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2019.01.24-20.46.17:042][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2019.01.24-20.46.17:042][  0]LogD3D11RHI:     GPU DeviceId: 0x5917 (for the marketing name, search the web for "GPU Device Id")
+[2019.01.24-20.46.17:042][  0]LogWindows: EnumDisplayDevices:
+[2019.01.24-20.46.17:042][  0]LogWindows:    0. 'Intel(R) UHD Graphics 620' (P:1 D:1)
+[2019.01.24-20.46.17:043][  0]LogWindows:    1. 'Intel(R) UHD Graphics 620' (P:0 D:0)
+[2019.01.24-20.46.17:043][  0]LogWindows:    2. 'Intel(R) UHD Graphics 620' (P:0 D:0)
+[2019.01.24-20.46.17:043][  0]LogWindows: DebugString: FoundDriverCount:3 
+[2019.01.24-20.46.17:043][  0]LogD3D11RHI:     Adapter Name: Intel(R) UHD Graphics 620
+[2019.01.24-20.46.17:043][  0]LogD3D11RHI:   Driver Version: 23.20.16.4973 (internal:23.20.16.4973, unified:23.20.16.4973)
+[2019.01.24-20.46.17:043][  0]LogD3D11RHI:      Driver Date: 2-28-2018
+[2019.01.24-20.46.17:044][  0]LogRHI: Texture pool is 1523 MB (70% of 2176 MB)
+[2019.01.24-20.46.17:152][  0]LogD3D11RHI: [IntelMetricsDiscovery] Started
+[2019.01.24-20.46.17:152][  0]LogD3D11RHI: Async texture creation enabled
+[2019.01.24-20.46.17:171][  0]LogD3D11RHI: GPU Timing Frequency: 12.000048 (Debug: 2 0)
+[2019.01.24-20.46.17:609][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
+[2019.01.24-20.46.17:624][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
+[2019.01.24-20.46.17:639][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
+[2019.01.24-20.46.17:654][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
+[2019.01.24-20.46.17:676][  0]LogTemp: Display: Loaded TP MacTargetPlatform
+[2019.01.24-20.46.17:691][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
+[2019.01.24-20.46.17:707][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
+[2019.01.24-20.46.17:723][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
+[2019.01.24-20.46.17:733][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:815][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.01.24-20.46.17:821][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
+[2019.01.24-20.46.17:905][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2019.01.24-20.46.17:905][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2019.01.24-20.46.17:927][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2019.01.24-20.46.17:927][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2019.01.24-20.46.17:941][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
+[2019.01.24-20.46.17:958][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
+[2019.01.24-20.46.17:972][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
+[2019.01.24-20.46.17:998][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
+[2019.01.24-20.46.18:049][  0]LogTemp: Display: Loaded TP LuminTargetPlatform
+[2019.01.24-20.46.18:049][  0]LogTemp: Display: Loaded TP LuminTargetPlatform
+[2019.01.24-20.46.18:050][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2019.01.24-20.46.18:244][  0]LogShaderCompilers: Guid format shader working directory is -22 characters bigger than the processId version (../../../../../Documents/New Github Stuff/Twisted-Mario/TwistedMario/Intermediate/Shaders/WorkingDirectory/8648/).
+[2019.01.24-20.46.18:244][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/jfine/AppData/Local/Temp/UnrealShaderWorkingDir/281D275448C2D76D4865A9A9716E633D/'.
+[2019.01.24-20.46.18:248][  0]LogXGEController: Cleaning working directory: C:/Users/jfine/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2019.01.24-20.46.18:248][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2019.01.24-20.46.18:249][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2019.01.24-20.46.18:249][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2019.01.24-20.46.20:337][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2019.01.24-20.46.20:537][  0]LogDerivedDataCache: Loaded boot cache 0.20s 71MB C:/Users/jfine/AppData/Local/UnrealEngine/4.21/DerivedDataCache/Boot.ddc.
+[2019.01.24-20.46.20:537][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/jfine/AppData/Local/UnrealEngine/4.21/DerivedDataCache/Boot.ddc
+[2019.01.24-20.46.20:537][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../Documents/New Github Stuff/Twisted-Mario/TwistedMario/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2019.01.24-20.46.20:537][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2019.01.24-20.46.20:537][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../Documents/New Github Stuff/Twisted-Mario/TwistedMario/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.01.24-20.46.20:537][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2019.01.24-20.46.20:561][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2019.01.24-20.46.20:574][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Enterprise/DerivedDataCache/Compressed.ddp.
+[2019.01.24-20.46.20:586][  0]LogDerivedDataCache: Using Local data cache path C:/Users/jfine/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2019.01.24-20.46.20:586][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2019.01.24-20.46.20:586][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2019.01.24-20.46.20:612][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2019.01.24-20.46.20:620][  0]LogSlate: Using FreeType 2.6.0
+[2019.01.24-20.46.20:645][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.01.24-20.46.20:996][  0]LogAssetRegistry: FAssetRegistry took 0.0354 seconds to start up
+[2019.01.24-20.46.21:480][  0]LogInit: Selected Device Profile: [Windows]
+[2019.01.24-20.46.21:914][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2019.01.24-20.46.21:941][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
+[2019.01.24-20.46.21:941][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2019.01.24-20.46.21:942][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2019.01.24-20.46.21:942][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
+[2019.01.24-20.46.22:013][  0]LogNetVersion: TwistedMario 1.0.0, NetCL: 4541578, EngineNetVer: 5, GameNetVer: 0 (Checksum: 1777631269)
+[2019.01.24-20.46.23:673][  0]LogPackageLocalizationCache: Processed 11 localized package path(s) for 2 prioritized culture(s) in 0.147347 seconds
+[2019.01.24-20.46.23:681][  0]LogUObjectArray: 39775 objects as part of root set at end of initial load.
+[2019.01.24-20.46.23:681][  0]LogUObjectAllocator: 6914656 out of 0 bytes used by permanent object pool.
+[2019.01.24-20.46.23:682][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2019.01.24-20.46.27:853][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2019.01.24-20.46.27:872][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2019.01.24-20.46.29:038][  0]SourceControl: Source control is disabled
+[2019.01.24-20.46.29:038][  0]SourceControl: Source control is disabled
+[2019.01.24-20.46.29:056][  0]SourceControl: Source control is disabled
+[2019.01.24-20.46.29:063][  0]SourceControl: Source control is disabled
+[2019.01.24-20.46.29:453][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2019.01.24-20.46.29:622][  0]LogOcInput: OculusInput pre-init called
+[2019.01.24-20.46.29:848][  0]LogEngine: Initializing Engine...
+[2019.01.24-20.46.29:851][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.01.24-20.46.29:855][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
+[2019.01.24-20.46.29:855][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2019.01.24-20.46.29:855][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
+[2019.01.24-20.46.29:855][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2019.01.24-20.46.30:220][  0]LogInit: Initializing FReadOnlyCVARCache
+[2019.01.24-20.46.30:280][  0]LogAIModule: Creating AISystem for world Untitled
+[2019.01.24-20.46.30:456][  0]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.01.24-20.46.31:261][  0]LogInit: FAudioDevice initialized.
+[2019.01.24-20.46.31:261][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2019.01.24-20.46.31:382][  0]LogDerivedDataCache: Saved boot cache 0.12s 71MB C:/Users/jfine/AppData/Local/UnrealEngine/4.21/DerivedDataCache/Boot.ddc.
+[2019.01.24-20.46.31:393][  0]LogInit: Texture streaming: Enabled
+[2019.01.24-20.46.31:474][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2019.01.24-20.46.31:526][  0]LogInit: Transaction tracking system initialized
+[2019.01.24-20.46.31:602][  0]BlueprintLog: New page: Editor Load
+[2019.01.24-20.46.31:856][  0]LocalizationService: Localization service is disabled
+[2019.01.24-20.46.32:602][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Content/' took 0.01s
+[2019.01.24-20.46.32:602][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2019.01.24-20.46.32:602][  0]LogCook: Display: Mobile HDR setting 1
+[2019.01.24-20.46.32:602][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2019.01.24-20.46.32:602][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
+[2019.01.24-20.46.32:602][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2019.01.24-20.46.32:602][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
+[2019.01.24-20.46.32:602][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2019.01.24-20.46.33:057][  0]SourceControl: Source control is disabled
+[2019.01.24-20.46.33:058][  0]Cmd: MAP LOAD FILE="../../../Engine/Content/Maps/Templates/Template_Default.umap" TEMPLATE=1 SHOWPROGRESS=1 FEATURELEVEL=3
+[2019.01.24-20.46.33:059][  0]LightingResults: New page: Lighting Build
+[2019.01.24-20.46.33:072][  0]MapCheck: New page: Map Check
+[2019.01.24-20.46.33:072][  0]LightingResults: New page: Lighting Build
+[2019.01.24-20.46.33:348][  0]LogAIModule: Creating AISystem for world Untitled_1
+[2019.01.24-20.46.33:372][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.01.24-20.46.33:409][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.01.24-20.46.33:410][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.268ms to complete.
+[2019.01.24-20.46.33:410][  0]LogFileHelpers: Loading map 'Template_Default' took 0.353
+[2019.01.24-20.46.33:608][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.01.24-20.46.33:618][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.01.24-20.46.33:627][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.01.24-20.46.33:636][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.01.24-20.46.33:662][  0]LogCollectionManager: Loaded 0 collections in 0.002565 seconds
+[2019.01.24-20.46.33:726][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Saved/Collections/' took 0.01s
+[2019.01.24-20.46.33:726][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Content/Developers/jfine/Collections/' took 0.01s
+[2019.01.24-20.46.33:726][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jfine/Documents/New Github Stuff/Twisted-Mario/TwistedMario/Content/Collections/' took 0.01s
+[2019.01.24-20.46.33:726][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
+[2019.01.24-20.46.33:739][  0]LogContentBrowser: Native class hierarchy populated in 0.0119 seconds. Added 2651 classes and 620 folders.
+[2019.01.24-20.46.33:760][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2019.01.24-20.46.33:774][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:785][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:819][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:829][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:838][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:847][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:855][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:864][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:873][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:884][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:892][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:900][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:910][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:918][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:926][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:934][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:978][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:987][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.33:995][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.34:003][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.34:062][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.34:074][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.34:082][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.34:092][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.34:101][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.34:109][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.34:117][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.34:125][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.01.24-20.46.34:375][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0005 seconds. Added 0 classes and 0 folders.
+[2019.01.24-20.46.34:396][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0003 seconds. Added 1 classes and 2 folders.
+[2019.01.24-20.46.34:457][  0]LogSlate: Took 0.007875 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2019.01.24-20.46.34:470][  0]LogSlate: Took 0.007795 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2019.01.24-20.46.34:490][  0]LogSlate: Took 0.010936 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2019.01.24-20.46.34:646][  0]LogRenderer: Reallocating scene render targets to support 928x436 Format 9 NumSamples 1 (Frame:1).
+[2019.01.24-20.46.35:103][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2019.01.24-20.46.35:103][  0]LogLoad: (Engine Initialization) Total time: 26.92 seconds
+[2019.01.24-20.46.35:103][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2019.01.24-20.46.35:115][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2019.01.24-20.46.35:187][  0]LogContentStreaming: Texture pool size now 800 MB
+[2019.01.24-20.46.35:213][  0]LogSlate: Took 0.008532 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.01.24-20.46.35:233][  1]LogAssetRegistry: Asset discovery search completed in 14.2598 seconds
+[2019.01.24-20.46.35:235][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2019.01.24-20.46.35:235][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000060 seconds (updated 0 objects)
+[2019.01.24-20.47.23:122][ 44]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.01.24-20.47.30:989][394]LogSlate: Took 0.000510 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.01.24-20.47.31:030][394]LogLinker: Warning: Can't find file '/Game/Maps/TestMap_BuiltData'
+[2019.01.24-20.47.31:031][394]LogLinker: Warning: Can't find file for asset '/Game/Maps/TestMap_BuiltData' while loading ../../../../../Documents/New Github Stuff/Twisted-Mario/TwistedMario/Content/Maps/TestMap.umap.
+[2019.01.24-20.47.31:031][394]LoadErrors: Error: /Game/Maps/TestMap : Can't find file for asset. /Game/Maps/TestMap_BuiltData
+[2019.01.24-20.47.31:040][394]LogLinker: Warning: Can't find file '/Game/Maps/TestMap_BuiltData'
+[2019.01.24-20.47.31:041][394]LogLinker: Warning: Can't find file for asset '/Game/Maps/TestMap_BuiltData' while loading ../../../../../Documents/New Github Stuff/Twisted-Mario/TwistedMario/Content/Maps/TestMap.umap.
+[2019.01.24-20.47.31:043][394]LogLinker: Warning: Can't find file '/Game/Maps/TestMap_BuiltData'
+[2019.01.24-20.47.31:044][394]LogLinker: Warning: Can't find file for asset '/Game/Maps/TestMap_BuiltData' while loading NULL.
+[2019.01.24-20.47.31:044][394]LogLinker: Warning: Can't find file '/Game/Maps/TestMap_BuiltData'
+[2019.01.24-20.47.31:045][394]LogLinker: Warning: Can't find file for asset '/Game/Maps/TestMap_BuiltData' while loading NULL.
+[2019.01.24-20.47.31:055][394]LogLinker: Warning: Can't find file '/Game/Maps/TestMap_BuiltData'
+[2019.01.24-20.47.31:055][394]LoadErrors: Failed to load /Game/Maps/TestMap_BuiltData.TestMap_BuiltData Referenced by PersistentLevel
+[2019.01.24-20.47.31:056][394]LogLinker: Warning: Can't find file for asset '/Game/Maps/TestMap_BuiltData' while loading NULL.
+[2019.01.24-20.47.31:073][394]LogAIModule: Creating AISystem for world TestMap
+[2019.01.24-20.47.31:132][394]LogAssetEditorManager: Opening Asset editor for World /Game/Maps/TestMap.TestMap
+[2019.01.24-20.47.31:176][394]Cmd: MAP LOAD FILE="../../../../../Documents/New Github Stuff/Twisted-Mario/TwistedMario/Content/Maps/TestMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2019.01.24-20.47.31:176][394]LightingResults: New page: Lighting Build
+[2019.01.24-20.47.31:177][394]LoadErrors: New page: Loading map: TestMap.umap
+[2019.01.24-20.47.31:178][394]MapCheck: New page: Map Check
+[2019.01.24-20.47.31:178][394]LightingResults: New page: Lighting Build
+[2019.01.24-20.47.31:224][394]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.01.24-20.47.31:300][394]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.01.24-20.47.31:301][394]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.388ms to complete.
+[2019.01.24-20.47.31:301][394]LogFileHelpers: Loading map 'TestMap' took 0.127
