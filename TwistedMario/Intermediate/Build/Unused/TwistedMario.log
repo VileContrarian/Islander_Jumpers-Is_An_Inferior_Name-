@@ -1,0 +1,4 @@
+﻿  Cleaning TwistedMarioEditor Binaries...
+UnrealBuildTool : error : Unable to clean target while hot-reloading. Close the editor and try again.
+                          (see ../Programs/UnrealBuildTool/Log.txt for full exception trace)
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.MakeFile.Targets(39,5): error MSB3073: The command "Y:\Tools\UE_4.21\Engine\Build\BatchFiles\Clean.bat TwistedMarioEditor Win64 Development "X:\Projects\Unreal\Twisted-Mario\TwistedMario\TwistedMario.uproject" -WaitMutex -FromMsBuild" exited with code -1.

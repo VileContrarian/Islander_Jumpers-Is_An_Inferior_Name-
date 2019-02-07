@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\TwistedMario.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{1C318681-0185-481B-814D-9130CED68427}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\TwistedMario">
+      <UniqueIdentifier>{36DD9B80-9DEA-4057-BF56-C7AEA7EB6F91}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TwistedMario\TwistedMario.Target.cs">
+      <Filter>Source\TwistedMario</Filter>
+    </None>
+    <None Include="..\..\Source\TwistedMario\TwistedMarioEditor.Target.cs">
+      <Filter>Source\TwistedMario</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{0A1F98DC-EBE2-4759-9B9A-30B71F2818FF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\TwistedMario\AFinishLine.cpp">
+      <Filter>Source\TwistedMario</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TwistedMario\AFinishLine.h">
+      <Filter>Source\TwistedMario</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TwistedMario\AItemBase.cpp">
+      <Filter>Source\TwistedMario</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TwistedMario\AItemBase.h">
+      <Filter>Source\TwistedMario</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TwistedMario\APickup.cpp">
+      <Filter>Source\TwistedMario</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TwistedMario\APickup.h">
+      <Filter>Source\TwistedMario</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TwistedMario\AStartLine.cpp">
+      <Filter>Source\TwistedMario</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TwistedMario\AStartLine.h">
+      <Filter>Source\TwistedMario</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TwistedMario\AVehicleBase.cpp">
+      <Filter>Source\TwistedMario</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TwistedMario\AVehicleBase.h">
+      <Filter>Source\TwistedMario</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\TwistedMario\TwistedMario.Build.cs">
+      <Filter>Source\TwistedMario</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\TwistedMario\TwistedMario.cpp">
+      <Filter>Source\TwistedMario</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TwistedMario\TwistedMario.h">
+      <Filter>Source\TwistedMario</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TwistedMario\UEmptyItem.cpp">
+      <Filter>Source\TwistedMario</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TwistedMario\UEmptyItem.h">
+      <Filter>Source\TwistedMario</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
