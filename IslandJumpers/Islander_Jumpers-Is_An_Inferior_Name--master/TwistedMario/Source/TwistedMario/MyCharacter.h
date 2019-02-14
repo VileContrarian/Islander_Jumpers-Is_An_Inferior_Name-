@@ -22,6 +22,8 @@ public:
 	float maxHP = 100.0f; //players max HP
 	UPROPERTY(BlueprintReadWrite,EditAnywhere, Category = "UI")
 		float UltProgress = .25f;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "UI")
+		int itemUseCount = 5;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
