@@ -7,7 +7,6 @@ AStartLine::AStartLine()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
 }
 
 // Called when the game starts or when spawned
@@ -24,3 +23,5 @@ void AStartLine::Tick(float DeltaTime)
 
 }
 
+
+// Last edited by ruan Erasmus on February 13, 2019

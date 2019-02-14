@@ -10,6 +10,11 @@ AFinishLine::AFinishLine()
 
 }
 
+void AFinishLine::onCrossLine(FTransform vPos)
+{
+	// do stuff
+}
+
 // Called when the game starts or when spawned
 void AFinishLine::BeginPlay()
 {
@@ -24,3 +29,5 @@ void AFinishLine::Tick(float DeltaTime)
 
 }
 
+
+// Last edited by ruan Erasmus on February 13, 2019

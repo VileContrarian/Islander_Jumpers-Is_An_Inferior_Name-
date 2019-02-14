@@ -14,7 +14,11 @@ class TWISTEDMARIO_API AFinishLine : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AFinishLine();
-
+	// The variable for the bound of the Finish Line
+	UPARAM()
+	FVector2D bounds;
+	// The method that will be called when a player collides with the finish line
+	void onCrossLine(FTransform vPos);
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -24,3 +28,4 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 };
+// Last edited by ruan Erasmus on February 13, 2019
