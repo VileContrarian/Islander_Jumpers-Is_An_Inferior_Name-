@@ -3,10 +3,10 @@
   <ItemGroup>
     <None Include="..\..\TwistedMario.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{1C318681-0185-481B-814D-9130CED68427}</UniqueIdentifier>
+      <UniqueIdentifier>{24018437-6496-4DCA-97F9-B2780B068B7C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\TwistedMario">
-      <UniqueIdentifier>{36DD9B80-9DEA-4057-BF56-C7AEA7EB6F91}</UniqueIdentifier>
+      <UniqueIdentifier>{63DD8F1A-1E99-48B3-B824-61009C2E6084}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TwistedMario\TwistedMario.Target.cs">
       <Filter>Source\TwistedMario</Filter>
@@ -15,7 +15,7 @@
       <Filter>Source\TwistedMario</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{0A1F98DC-EBE2-4759-9B9A-30B71F2818FF}</UniqueIdentifier>
+      <UniqueIdentifier>{E638392E-5412-4928-A3B2-609F60627634}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>

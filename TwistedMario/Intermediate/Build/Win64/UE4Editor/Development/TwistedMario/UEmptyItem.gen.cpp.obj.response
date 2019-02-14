@@ -424,9 +424,9 @@
 /I Runtime\AnimGraphRuntime\Public\BoneControllers
 /I Runtime\AnimGraphRuntime\Public\RBF
 /I ..\Plugins\Runtime\PhysXVehicles\Source\ThirdParty
-/I X:\Projects\Unreal\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\UE4Editor\Inc\TwistedMario
-/I X:\Projects\Unreal\Twisted-Mario\TwistedMario\Source
-/I X:\Projects\Unreal\Twisted-Mario\TwistedMario\Source\TwistedMario
+/I C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\UE4Editor\Inc\TwistedMario
+/I C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Source
+/I C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Source\TwistedMario
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -451,16 +451,17 @@
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include
 /I ThirdParty\PhysX3\APEX_1.4\shared\internal\include
 /I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"
-/FI"X:\Projects\Unreal\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\TwistedMarioEditor\Development\Engine\SharedPCH.Engine.h"
-/Yu"X:\Projects\Unreal\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\TwistedMarioEditor\Development\Engine\SharedPCH.Engine.h"
-/Fp"X:\Projects\Unreal\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\TwistedMarioEditor\Development\Engine\SharedPCH.Engine.h.pch"
-"X:\Projects\Unreal\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\UE4Editor\Inc\TwistedMario\UEmptyItem.gen.cpp"
-/FI"X:\Projects\Unreal\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\UE4Editor\Development\TwistedMario\Definitions.TwistedMario.h"
-/Fo"X:\Projects\Unreal\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\UE4Editor\Development\TwistedMario\UEmptyItem.gen.cpp.obj"
+/FI"C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\TwistedMarioEditor\Development\Engine\SharedPCH.Engine.h"
+/Yu"C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\TwistedMarioEditor\Development\Engine\SharedPCH.Engine.h"
+/Fp"C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\TwistedMarioEditor\Development\Engine\SharedPCH.Engine.h.pch"
+"C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\UE4Editor\Inc\TwistedMario\UEmptyItem.gen.cpp"
+/FI"C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\UE4Editor\Development\TwistedMario\Definitions.TwistedMario.h"
+/Fo"C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\UE4Editor\Development\TwistedMario\UEmptyItem.gen.cpp.obj"
 /TP
 /GR-
 /W4

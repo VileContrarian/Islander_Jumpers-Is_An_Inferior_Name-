@@ -1,4 +1,65 @@
-﻿  Cleaning TwistedMarioEditor Binaries...
-UnrealBuildTool : error : Unable to clean target while hot-reloading. Close the editor and try again.
-                          (see ../Programs/UnrealBuildTool/Log.txt for full exception trace)
-C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.MakeFile.Targets(39,5): error MSB3073: The command "Y:\Tools\UE_4.21\Engine\Build\BatchFiles\Clean.bat TwistedMarioEditor Win64 Development "X:\Projects\Unreal\Twisted-Mario\TwistedMario\TwistedMario.uproject" -WaitMutex -FromMsBuild" exited with code -1.
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Ruan\Documents\GitHub\Twisted-Mario).
+  Creating makefile for TwistedMarioEditor (no existing makefile)
+  Performing full C++ include scan (no include cache file)
+  Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Parsing headers for TwistedMarioEditor
+    Running UnrealHeaderTool "C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\TwistedMario.uproject" "C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\TwistedMarioEditor\Development\TwistedMarioEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for TwistedMarioEditor in 13.4158526 seconds
+  Building 17 actions with 4 processes...
+    [1/17] PCLaunch.rc
+    [2/17] SharedPCH.Engine.cpp
+    [3/17] TwistedMario.init.gen.cpp
+    [4/17] AVehicleBase.gen.cpp
+C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Source\TwistedMario/AVehicleBase.h(37): warning C4263: 'void AVehicleBase::GetVelocity(FVector)': member function does not override any base class virtual member function
+C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Source\TwistedMario/AVehicleBase.h(80): warning C4264: 'FVector APawn::GetVelocity(void) const': no override available for virtual member function from base 'APawn'; function is hidden
+    C:\Program Files\Epic Games\UE_4.21\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(223): note: see declaration of 'APawn::GetVelocity'
+    C:\Program Files\Epic Games\UE_4.21\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimInstance.generated.h(23): note: see declaration of 'APawn'
+    [5/17] AStartLine.gen.cpp
+    [6/17] APickup.gen.cpp
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AVehicleBase.h(37): warning C4263: 'void AVehicleBase::GetVelocity(FVector)': member function does not override any base class virtual member function
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AVehicleBase.h(80): warning C4264: 'FVector APawn::GetVelocity(void) const': no override available for virtual member function from base 'APawn'; function is hidden
+    C:\Program Files\Epic Games\UE_4.21\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(223): note: see declaration of 'APawn::GetVelocity'
+    C:\Program Files\Epic Games\UE_4.21\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimInstance.generated.h(23): note: see declaration of 'APawn'
+    [7/17] UEmptyItem.cpp
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AVehicleBase.h(37): warning C4263: 'void AVehicleBase::GetVelocity(FVector)': member function does not override any base class virtual member function
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AVehicleBase.h(80): warning C4264: 'FVector APawn::GetVelocity(void) const': no override available for virtual member function from base 'APawn'; function is hidden
+    C:\Program Files\Epic Games\UE_4.21\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(223): note: see declaration of 'APawn::GetVelocity'
+    C:\Program Files\Epic Games\UE_4.21\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimInstance.generated.h(23): note: see declaration of 'APawn'
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AItemBase.h(35): warning C4265: 'AItemBase': class has virtual functions, but destructor is not virtual
+             instances of this class may not be destructed correctly
+    [8/17] AVehicleBase.cpp
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AVehicleBase.h(37): warning C4263: 'void AVehicleBase::GetVelocity(FVector)': member function does not override any base class virtual member function
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AVehicleBase.h(80): warning C4264: 'FVector APawn::GetVelocity(void) const': no override available for virtual member function from base 'APawn'; function is hidden
+    C:\Program Files\Epic Games\UE_4.21\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(223): note: see declaration of 'APawn::GetVelocity'
+    C:\Program Files\Epic Games\UE_4.21\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimInstance.generated.h(23): note: see declaration of 'APawn'
+    [9/17] AStartLine.cpp
+    [10/17] AFinishLine.gen.cpp
+    [11/17] TwistedMario.cpp
+    [12/17] APickup.cpp
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AVehicleBase.h(37): warning C4263: 'void AVehicleBase::GetVelocity(FVector)': member function does not override any base class virtual member function
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AVehicleBase.h(80): warning C4264: 'FVector APawn::GetVelocity(void) const': no override available for virtual member function from base 'APawn'; function is hidden
+    C:\Program Files\Epic Games\UE_4.21\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(223): note: see declaration of 'APawn::GetVelocity'
+    C:\Program Files\Epic Games\UE_4.21\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimInstance.generated.h(23): note: see declaration of 'APawn'
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AItemBase.h(35): warning C4265: 'AItemBase': class has virtual functions, but destructor is not virtual
+             instances of this class may not be destructed correctly
+    [13/17] AItemBase.cpp
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AVehicleBase.h(37): warning C4263: 'void AVehicleBase::GetVelocity(FVector)': member function does not override any base class virtual member function
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AVehicleBase.h(80): warning C4264: 'FVector APawn::GetVelocity(void) const': no override available for virtual member function from base 'APawn'; function is hidden
+    C:\Program Files\Epic Games\UE_4.21\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(223): note: see declaration of 'APawn::GetVelocity'
+    C:\Program Files\Epic Games\UE_4.21\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimInstance.generated.h(23): note: see declaration of 'APawn'
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AItemBase.h(35): warning C4265: 'AItemBase': class has virtual functions, but destructor is not virtual
+             instances of this class may not be destructed correctly
+    [14/17] AFinishLine.cpp
+    [15/17] UEmptyItem.gen.cpp
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AVehicleBase.h(37): warning C4263: 'void AVehicleBase::GetVelocity(FVector)': member function does not override any base class virtual member function
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AVehicleBase.h(80): warning C4264: 'FVector APawn::GetVelocity(void) const': no override available for virtual member function from base 'APawn'; function is hidden
+    C:\Program Files\Epic Games\UE_4.21\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(223): note: see declaration of 'APawn::GetVelocity'
+    C:\Program Files\Epic Games\UE_4.21\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimInstance.generated.h(23): note: see declaration of 'APawn'
+c:\users\ruan\documents\github\twisted-mario\twistedmario\source\twistedmario\AItemBase.h(35): warning C4265: 'AItemBase': class has virtual functions, but destructor is not virtual
+             instances of this class may not be destructed correctly
+    [16/17] UE4Editor-TwistedMario.lib
+       Creating library C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\UE4Editor\Development\TwistedMario\UE4Editor-TwistedMario.lib and object C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\UE4Editor\Development\TwistedMario\UE4Editor-TwistedMario.exp
+    [17/17] UE4Editor-TwistedMario.dll
+       Creating library C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\UE4Editor\Development\TwistedMario\UE4Editor-TwistedMario.suppressed.lib and object C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Intermediate\Build\Win64\UE4Editor\Development\TwistedMario\UE4Editor-TwistedMario.suppressed.exp
+  Deploying TwistedMarioEditor Win64 Development...
+  Total build time: 107.64 seconds (Parallel executor: 41.51 seconds)
