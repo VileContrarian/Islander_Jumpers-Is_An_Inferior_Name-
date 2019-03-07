@@ -1,3 +1,0 @@
-C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Source\TwistedMario\TwistedMario.Build.cs
-C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Source\TwistedMario\TwistedMario.Target.cs
-C:\Users\Ruan\Documents\GitHub\Twisted-Mario\TwistedMario\Source\TwistedMario\TwistedMarioEditor.Target.cs
