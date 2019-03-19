@@ -69,8 +69,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float torque;
 
-	//Set maximum speed limit
-	//Default is 300.0f
+	//Set maximum speed limit [Default is 300.0f]
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float speedMax;
 
@@ -78,19 +77,24 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float accelerationRate;
 
+	//Controls how soon the car stops when no movement input is active
+	//High value = quicker stops [Default 50.0f (max: 100.0f)]
+	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
+		float accelerationDecay;
+
 	//The lower the traction the more 'slippery' the movement becomes
-	//Shouldn't be less than 1.0f //Default 50.0f
+	//Shouldn't be less than 1.0f [Default 50.0f (max: 1000.0f)]
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float traction;
 
 	//The lower the handling the less grip the vehicle has when turning
-	//Shouldn't be less than 1.0f //Default 50.0f
+	//Shouldn't be less than 1.0f [Default 50.0f (max: 50.0f)]
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float handling;
 
-	//Unused Yet
+	//Determines the friction when drifting
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
-		float turningGrip;
+		float driftGrip;
 
 	// Keep track of laps completed
 	UPROPERTY(EditAnywhere)
@@ -117,6 +121,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void HandBrake();
+
+	UFUNCTION(BlueprintCallable)
+		void ReleaseHandBrake();
 
 	UFUNCTION(BlueprintCallable)
 		void Jump();
@@ -172,8 +179,12 @@ public:
 	inline void SetHandling(float value_) { handling = value_; }
 	inline float GetHandling() const { return handling; }
 
-	inline void SetAccelerationRate(float value_) { accelerationRate = value_; }
+	inline void SetAccelerationRate(float value_) { if (value_ > 0.0f) accelerationRate = value_; }
 	inline float GetAccelerationRate() { return accelerationRate; }
+
+	inline void SetAccelerationDecay(float value_) { if (value_ > 0.0f) accelerationDecay = value_; }
+	inline float GetAccelerationDecay() { return accelerationDecay; }
+
 
 private:
 	///Variables
@@ -199,6 +210,9 @@ private:
 	//Affects falling speed
 	float timeElapsedAir;
 
+	//Provides the upper value range of Accel Decay
+	float accelDecayRange;
+
 	//Provides the upper value range of traction
 	float tractionRange;
 
@@ -221,11 +235,12 @@ private:
 	bool isForwardPressed;
 	bool isTurning;
 	bool jumpState;
+	float initialTraction;
 
 	bool isMovingForward();
 	FVector FindLeftVector();
 	FVector FindRightVector();
-
+	float FindAngle(FVector vecA, FVector vecB);
 
 	/// Debug Tools
 
@@ -253,7 +268,6 @@ private:
 	}
 
 protected:
-
 
 
 };//END OF CLASS

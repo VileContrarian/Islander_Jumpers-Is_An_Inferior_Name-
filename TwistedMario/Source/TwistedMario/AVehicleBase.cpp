@@ -36,18 +36,20 @@ void AVehicleBase::BeginPlay()
 	if (torque <= 0.0f) torque = 250.0f;
 
 	if (speedMax <= 0.0f) speedMax = 300.0f;
-	if (accelerationRate <= 0.0f) accelerationRate = 0.005f;
-	if (traction <= 0.0f) traction = 50.0f;
+	if (accelerationRate <= 0.0f) accelerationRate = 0.008f;
+	if (accelerationDecay <= 0.0f) accelerationDecay = 50.0f;
+	if (traction <= 0.0f) traction = 100.0f;
 	if (handling <= 0.0f) handling = 50.0f;
 
 	lapCounter = 0;
 	timeElapsedLin = 1.0f;
 	timeElapsedRot = 1.0f;
-	tractionRange = 100.0f;
+	accelDecayRange = 100.0f;
+	tractionRange = 1000.0f;
 	handlingRange = 100.0f;
 	gripForce = 0.1f;
-	turningGrip = 1.0f;
-
+	driftGrip = 1.0f;
+	initialTraction = traction;
 	isGrounded = true;
 }
 
@@ -55,17 +57,17 @@ void AVehicleBase::BeginPlay()
 void AVehicleBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
+
 	/*Debug Logs
 	FVector debugVel;
 	debugVel = CarMesh->GetComponentVelocity();
 	//UE_LOG(LogWindows, Warning, TEXT("Velocity : %f, %f, %f"), debugVel.X, debugVel.Y, debugVel.Z)
 	//UE_LOG(LogWindows, Warning, TEXT("Velocity : %f, %f, %f"), sideForce.X, sideForce.Y, sideForce.Z)
 	*/
-	
-	//LogFloat(GetSpeed());
 
 	/*
+	FString TheFloatStr = FString::SanitizeFloat(angleDeviation); //Convert float to string
+
 	if (GEngine) {
 		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Blue, TEXT(""));
 	}
@@ -113,27 +115,54 @@ void AVehicleBase::Accelerate(float value_)
 			velLinear.Z = 0.0f;
 		}
 
-		else 
+		else
 		{
 			//If moving beyond speed limit gain zero velocity
-			velLinear = FVector().ZeroVector; 
+			velLinear = FVector().ZeroVector;
 		}
 
+
+		//Drifting counter force
+		float angleDeviation;
+		FVector counterForce;
+
+		//Basically, if car's face is turning 90 degree away from current velocity then cancels out the velocity and recalculate
+		if (isMovingForward()) {
+			angleDeviation = FindAngle(CarMesh->GetComponentVelocity().GetSafeNormal(), CarMesh->GetForwardVector());
+
+			counterForce = -CarMesh->GetComponentVelocity() * (FMath::Abs(angleDeviation) / 90.0f) / (tractionRange / traction);
+			counterForce.Z = 0.0f;
+
+			velLinear = velLinear + counterForce;
+		}
+		else {
+			angleDeviation = FindAngle(CarMesh->GetComponentVelocity().GetSafeNormal(), -CarMesh->GetForwardVector());
+
+			counterForce = -CarMesh->GetComponentVelocity() * (FMath::Abs(angleDeviation) / 90.0f) / (tractionRange / traction);
+			counterForce.Z = 0.0f;
+
+			velLinear = velLinear + counterForce;
+		}
+
+
+
+
+
 		CarMesh->SetPhysicsLinearVelocity(velLinear, true);
-		
+
 		timeElapsedLin = 1.0f;
 	}
 
 	//Accel decays when no input is received
 	if (value_ == 0.0f) {
-		if (traction > tractionRange) traction = tractionRange;
-		if (traction <= 0.0f) traction = SMALLVAL;
+		if (accelerationDecay > accelDecayRange) accelerationDecay = accelDecayRange;
+		if (accelerationDecay <= 0.0f) accelerationDecay = SMALLVAL;
 
-		velLinear.X = -CarMesh->GetComponentVelocity().X / (tractionRange * 10.0f / traction);
-		velLinear.Y = -CarMesh->GetComponentVelocity().Y / (tractionRange * 10.0f / traction);
+		velLinear.X = -CarMesh->GetComponentVelocity().X / (accelDecayRange * 10.0f / accelerationDecay);
+		velLinear.Y = -CarMesh->GetComponentVelocity().Y / (accelDecayRange * 10.0f / accelerationDecay);
 
 		CarMesh->SetPhysicsLinearVelocity(velLinear, true);
-		
+
 		timeElapsedAcc = 0.0f;	//Reset acceleration rate
 	}
 
@@ -152,7 +181,7 @@ void AVehicleBase::Turn(float value_)
 
 	//Calculate ratio to affect when and how fast the vehicle can turn
 	float turningRate;
-	
+
 	if (GetSpeed() == 0.0f) {
 		turningRate = 0.0f;
 	}
@@ -199,9 +228,12 @@ void AVehicleBase::Turn(float value_)
 
 void AVehicleBase::HandBrake()
 {
-	//traction divide or multiply by some coeff
-	//maybe handling
-	//grip force
+	traction = driftGrip;
+}
+
+void AVehicleBase::ReleaseHandBrake()
+{
+	traction = initialTraction;
 }
 
 void AVehicleBase::Jump()
@@ -327,6 +359,22 @@ FVector AVehicleBase::FindRightVector()
 
 	return perpVector;
 }
+
+float AVehicleBase::FindAngle(FVector vecA, FVector vecB)
+{
+	float magA, magB;
+	magA = FMath::Sqrt((vecA.X * vecA.X) + (vecA.Y * vecA.Y));
+	magB = FMath::Sqrt((vecB.X * vecB.X) + (vecB.Y * vecB.Y));
+
+	float angle = FMath::Acos(FVector().DotProduct(vecA, vecB) / (magA * magB));
+
+	angle = FMath::RadiansToDegrees(angle);
+
+	return angle;
+}
+
+
+
 
 
 
