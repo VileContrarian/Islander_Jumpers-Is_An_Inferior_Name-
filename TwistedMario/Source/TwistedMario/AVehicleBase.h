@@ -92,7 +92,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float handling;
 
-	//Determines the friction when drifting
+	//Affects drifting
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float driftGrip;
 
@@ -146,44 +146,75 @@ public:
 
 
 	/// Getters and Setters
-
+	UFUNCTION(BlueprintCallable)
 	void SetPosition(FVector vec_);
+
+	UFUNCTION(BlueprintCallable)
 	FVector GetPosition();
 
+	UFUNCTION(BlueprintCallable)
 	void SetRotation(FVector vec_);
+
+	UFUNCTION(BlueprintCallable)
 	FVector GetRotation();
 
 	//Heal and damage 
-	inline void SetHealth(int value_) {
-		if (health + value_ <= 0) health = 0;
-		if (health + value_ >= healthMax) health = healthMax;
-		else health += value_;
-	}
-	inline int GetHealth() const { return health; }
+	UFUNCTION(BlueprintCallable)
+	void DoDamage(int value_); 
 
-	inline void SetMaxHealth(int value_) { if (value_ > 0) healthMax = value_; }
-	inline int GetMaxHealth() const { return healthMax; }
+	UFUNCTION(BlueprintCallable)
+	void DoHeal(int value_);
 
-	inline void SetMass(float value_) { if (value_ > 0.0f) mass = value_; }
-	inline float GetMass();
+	UFUNCTION(BlueprintCallable)
+	int GetHealth();
 
-	inline void SetAttack(int value_) { attack = value_; }
-	inline int GetAttack() const { return attack; }
+	UFUNCTION(BlueprintCallable)
+	void SetMaxHealth(int value_); 
+	
+	UFUNCTION(BlueprintCallable)
+	int GetMaxHealth();
 
-	inline void SetDefense(int value_) { defense = value_; }
-	inline int GetDefense() const { return defense; }
+	UFUNCTION(BlueprintCallable)
+	void SetMass(float value_);
+	
+	UFUNCTION(BlueprintCallable)
+	float GetMass();
 
-	inline void SetTraction(float value_) { traction = value_; }
-	inline float GetTraction() const { return traction; }
+	UFUNCTION(BlueprintCallable)
+	void SetAttack(int value_);
+	
+	UFUNCTION(BlueprintCallable)
+	int GetAttack(); 
 
-	inline void SetHandling(float value_) { handling = value_; }
-	inline float GetHandling() const { return handling; }
+	UFUNCTION(BlueprintCallable)
+	void SetDefense(int value_); 
+	
+	UFUNCTION(BlueprintCallable)
+	int GetDefense();
 
-	inline void SetAccelerationRate(float value_) { if (value_ > 0.0f) accelerationRate = value_; }
-	inline float GetAccelerationRate() { return accelerationRate; }
+	UFUNCTION(BlueprintCallable)
+	void SetTraction(float value_); 
+	
+	UFUNCTION(BlueprintCallable)
+	float GetTraction();
 
-	inline void SetAccelerationDecay(float value_) { if (value_ > 0.0f) accelerationDecay = value_; }
-	inline float GetAccelerationDecay() { return accelerationDecay; }
+	UFUNCTION(BlueprintCallable)
+	void SetHandling(float value_);
+	
+	UFUNCTION(BlueprintCallable)
+	float GetHandling();
+
+	UFUNCTION(BlueprintCallable)
+	void SetAccelerationRate(float value_);
+	
+	UFUNCTION(BlueprintCallable)
+	float GetAccelerationRate();
+
+	UFUNCTION(BlueprintCallable)
+	void SetAccelerationDecay(float value_);
+	
+	UFUNCTION(BlueprintCallable)
+	float GetAccelerationDecay();
 
 
 private:

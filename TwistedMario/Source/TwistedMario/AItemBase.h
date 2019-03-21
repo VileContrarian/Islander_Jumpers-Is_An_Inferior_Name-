@@ -26,7 +26,8 @@ public:
 	// getters for private variables
 	FString getName();
 	int getType();
-	~AItemBase();
+	virtual ~AItemBase();
+
 protected:
 	// additional identifier in case you can't use ID for some reason
 	FString name;

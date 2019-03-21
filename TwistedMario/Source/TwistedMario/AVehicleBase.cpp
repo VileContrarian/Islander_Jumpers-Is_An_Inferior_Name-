@@ -27,7 +27,7 @@ void AVehicleBase::BeginPlay()
 	//Setting default attribute values
 	if (mass <= 0.0f) mass = 100.0f;	//In Kg
 	if (healthMax <= 0.0f) healthMax = 100;
-	SetHealth(healthMax);
+	health = healthMax;
 
 	if (attack <= 0) attack = 1;
 	if (defense <= 0) defense = 1;
@@ -144,10 +144,6 @@ void AVehicleBase::Accelerate(float value_)
 			velLinear = velLinear + counterForce;
 		}
 
-
-
-
-
 		CarMesh->SetPhysicsLinearVelocity(velLinear, true);
 
 		timeElapsedLin = 1.0f;
@@ -177,7 +173,7 @@ void AVehicleBase::Turn(float value_)
 	}
 
 	//Checks button presses
-	turningDir = value_;
+	turningDir = 1.0f / value_;
 
 	//Calculate ratio to affect when and how fast the vehicle can turn
 	float turningRate;
@@ -186,15 +182,16 @@ void AVehicleBase::Turn(float value_)
 		turningRate = 0.0f;
 	}
 	else {
-		turningRate = GetSpeed() / (speedMax * 10.0f);
+		turningRate = GetSpeed() / (speedMax * 5.0f);
 	}
 
+	LogFloat(turningRate);
 	//Rotation when moving forward
 	if (value_ != 0.0f && isForwardPressed) {
 
 		velAngular.X = 0.0f;
 		velAngular.Y = 0.0f;
-		velAngular.Z = (torque / mass) * value_ * turningRate;
+		velAngular.Z = (torque / mass) * turningDir * turningRate;
 
 		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
 		timeElapsedRot = 1.0f;
@@ -205,7 +202,8 @@ void AVehicleBase::Turn(float value_)
 
 		velAngular.X = 0.0f;
 		velAngular.Y = 0.0f;
-		velAngular.Z = -(torque / mass) * value_ * turningRate;
+		velAngular.Z = -(torque / mass) * turningDir * turningRate;
+
 
 		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
 		timeElapsedRot = 1.0f;
@@ -320,10 +318,104 @@ FVector AVehicleBase::GetRotation()
 	return CarMesh->GetPhysicsAngularVelocityInDegrees();
 }
 
+void AVehicleBase::DoDamage(int value_)
+{
+	if (value_ <= 0) return;
+	if (health - value_ <= 0) health = 0;
+	else health -= value_;
+}
+
+inline void AVehicleBase::DoHeal(int value_)
+{
+	if (value_ <= 0) return;
+	if (health + value_ >= healthMax) health = healthMax;
+	else health += value_;
+}
+
+int AVehicleBase::GetHealth()
+{
+	return health;
+}
+
+void AVehicleBase::SetMaxHealth(int value_)
+{
+	if (value_ > 0) healthMax = value_;
+}
+
+int AVehicleBase::GetMaxHealth()
+{
+	return healthMax;
+}
+
+void AVehicleBase::SetMass(float value_)
+{
+	if (value_ > 0.0f) mass = value_;
+}
+
 inline float AVehicleBase::GetMass()
 {
 	if (CarMesh == nullptr) return 0.0f;
 	return CarMesh->GetMass();
+}
+
+void AVehicleBase::SetAttack(int value_)
+{
+	attack = value_;
+}
+
+int AVehicleBase::GetAttack()
+{
+	return attack;
+}
+
+void AVehicleBase::SetDefense(int value_)
+{
+	defense = value_;
+}
+
+int AVehicleBase::GetDefense()
+{
+	return defense;
+}
+
+void AVehicleBase::SetTraction(float value_)
+{
+	traction = value_;
+}
+
+inline float AVehicleBase::GetTraction()
+{
+	return traction;
+}
+
+inline void AVehicleBase::SetHandling(float value_)
+{
+	handling = value_;
+}
+
+inline float AVehicleBase::GetHandling()
+{
+	return handling;
+}
+
+inline void AVehicleBase::SetAccelerationRate(float value_)
+{
+	if (value_ > 0.0f) accelerationRate = value_;
+}
+
+inline float AVehicleBase::GetAccelerationRate()
+{
+	return accelerationRate;
+}
+
+inline void AVehicleBase::SetAccelerationDecay(float value_)
+{
+	if (value_ > 0.0f) accelerationDecay = value_;
+}
+
+inline float AVehicleBase::GetAccelerationDecay()
+{
+	return accelerationDecay;
 }
 
 bool AVehicleBase::isMovingForward()
