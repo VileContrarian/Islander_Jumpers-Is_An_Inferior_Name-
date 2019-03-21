@@ -104,6 +104,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		bool isGrounded;
 
+	//Ground check derive from thrusters
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		uint8 location;
+
 	///Methods
 
 	//Moves vehicle forward/backward
