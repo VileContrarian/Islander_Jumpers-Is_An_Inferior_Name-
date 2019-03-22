@@ -21,8 +21,8 @@ public:
 	ACheckpoint();
 
 	// Spawn points for the vehicles
-	UPROPERTY(EditAnywhere, Category = "Checkpoints")
-	FVector spawnpoints[4];
+	//UPROPERTY(EditAnywhere, Category = "Checkpoints", BlueprintReadWrite)
+	//FVector spawnpoints[4];
 
 	// The index of the checkpoint, so that the game can determine if
 	// the player is advancing. Also editable in the editor
@@ -40,6 +40,8 @@ public:
 	// The method that will be called when a player collides with the finish line
 	UFUNCTION(Blueprintcallable, Category = "Checkpoints")
 	void onCrossLine(AVehicleBase *vehicle);
+	UFUNCTION(Blueprintcallable, Category = "Checkpoints")
+	uint8 getIndex();
 
 protected:
 	// Called when the game starts or when spawned
