@@ -14,8 +14,8 @@ AVehicleBase::AVehicleBase()
 	PrimaryActorTick.bCanEverTick = true;
 
 	//Scene Component
-	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root")); //Instantiating the "Transform" component
-	SetRootComponent(Root);
+	//Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root")); //Instantiating the "Transform" component
+	//SetRootComponent(Root);
 
 }
 
