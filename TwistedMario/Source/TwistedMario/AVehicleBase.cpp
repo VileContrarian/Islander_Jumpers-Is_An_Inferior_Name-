@@ -194,7 +194,7 @@ void AVehicleBase::Turn(float value_)
 		velAngular.Z = (torque / mass) * turningDir * turningRate;
 
 		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
-		timeElapsedRot = 1.0f;
+		timeElapsedRot = 2.0f;
 	}
 
 	//Rotation when reversing
@@ -206,7 +206,7 @@ void AVehicleBase::Turn(float value_)
 
 
 		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
-		timeElapsedRot = 1.0f;
+		timeElapsedRot = 2.0f;
 	}
 
 	//Residual angular drag when no longer receives input
