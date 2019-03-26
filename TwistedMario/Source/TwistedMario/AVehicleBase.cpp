@@ -266,6 +266,23 @@ void AVehicleBase::FallingState()
 	//CarMesh->SetPhysicsLinearVelocity(jumpForce, true);
 }
 
+void AVehicleBase::respawn(ACheckpoint *checkpoint)
+{
+	if (checkpoint->index == location) {
+		CarMesh->SetWorldLocation(checkpoint->GetActorLocation());
+		CarMesh->SetWorldRotation(checkpoint->GetActorRotation());
+		velAngular.Set(0, 0, 0);
+		velLinear.Set(0, 0, 0);
+		accelAngular.Set(0, 0, 0);
+		accelLinear.Set(0, 0, 0);
+		timeElapsedAcc = 0;
+		timeElapsedLin = 0;
+		timeElapsedRot = 0;
+		CarMesh->SetPhysicsLinearVelocity(FVector(0, 0, 0));
+		CarMesh->SetPhysicsAngularVelocity(FVector(0, 0, 0));
+	}
+}
+
 void AVehicleBase::UseItem()
 {
 	//Will fill in later when item classes are set up

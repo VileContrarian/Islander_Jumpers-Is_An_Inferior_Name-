@@ -36,6 +36,11 @@ void ACheckpoint::onCrossLine(AVehicleBase *vehicle)
 	}
 }
 
+uint8 ACheckpoint::getIndex()
+{
+	return index;
+}
+
 // Called when the game starts or when spawned
 void ACheckpoint::BeginPlay()
 {

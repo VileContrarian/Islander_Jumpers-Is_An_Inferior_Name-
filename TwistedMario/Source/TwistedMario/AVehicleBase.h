@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Checkpoint.h"
 #include "GameFramework/Pawn.h"
 #include "AVehicleBase.generated.h"
 
@@ -104,8 +105,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		bool isGrounded;
 
-	//Ground check derive from thrusters
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	//current checkpoint
+	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		uint8 location;
 
 	///Methods
@@ -147,6 +148,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void FallingState();
+	UFUNCTION(BlueprintCallable)
+		void respawn(ACheckpoint *checkpoint);
 
 
 	/// Getters and Setters
