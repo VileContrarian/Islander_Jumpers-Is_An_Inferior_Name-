@@ -107,7 +107,7 @@ void AVehicleBase::Accelerate(float value_)
 	if (value_ != 0.0f) {
 
 		//Speed Limit condition
-		if (GetSpeed() < speedMax * 10.0f) {
+		if (GetSpeed() < speedMax) {
 			timeElapsedAcc += accelerationRate;
 
 			velLinear.X = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().X;
