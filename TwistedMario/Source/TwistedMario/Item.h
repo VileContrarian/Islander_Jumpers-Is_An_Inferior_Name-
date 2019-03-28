@@ -23,4 +23,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	// Every item has this method implemented inside it.
+	virtual void UseItem(APawn *User);
+
 };
