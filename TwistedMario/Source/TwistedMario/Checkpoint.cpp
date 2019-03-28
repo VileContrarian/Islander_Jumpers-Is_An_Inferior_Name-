@@ -4,6 +4,7 @@
 Added some basic (untested) funtionality to Checkpoints*/
 
 #include "Checkpoint.h"
+#include "AVehicleBase.h"
 #include "Runtime/Engine/Classes/Components/BoxComponent.h"
 // Sets default values
 ACheckpoint::ACheckpoint()

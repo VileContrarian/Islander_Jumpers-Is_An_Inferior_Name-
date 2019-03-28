@@ -7,7 +7,6 @@ Added Checkpoint.h*/
 #pragma once
 
 #include "CoreMinimal.h"
-#include "AVehicleBase.h"
 #include "GameFramework/Actor.h"
 #include "Checkpoint.generated.h"
 
