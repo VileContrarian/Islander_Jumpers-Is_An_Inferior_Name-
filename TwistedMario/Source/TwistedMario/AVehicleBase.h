@@ -145,6 +145,10 @@ public:
 		void FallingState();
 
 
+	UFUNCTION(BlueprintCallable)
+		void SwitchVelocityAxis();
+
+
 	/// Getters and Setters
 
 	void SetPosition(FVector vec_);

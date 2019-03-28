@@ -326,6 +326,11 @@ inline float AVehicleBase::GetMass()
 	return CarMesh->GetMass();
 }
 
+void AVehicleBase::SwitchVelocityAxis() {
+	FVector previous = CarMesh->GetPhysicsLinearVelocity;
+	velLinear.Set(previous.Y, previous.X, previous.Z);
+}
+
 bool AVehicleBase::isMovingForward()
 {
 	if (CarMesh == nullptr) return false;
