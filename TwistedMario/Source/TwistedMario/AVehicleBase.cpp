@@ -13,10 +13,6 @@ AVehicleBase::AVehicleBase()
 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	//Scene Component
-	//Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root")); //Instantiating the "Transform" component
-	//SetRootComponent(Root);
-
 }
 
 // Called when the game starts or when spawned
@@ -27,7 +23,7 @@ void AVehicleBase::BeginPlay()
 	//Setting default attribute values
 	if (mass <= 0.0f) mass = 100.0f;	//In Kg
 	if (healthMax <= 0.0f) healthMax = 100;
-	SetHealth(healthMax);
+	health = healthMax;
 
 	if (attack <= 0) attack = 1;
 	if (defense <= 0) defense = 1;
@@ -74,13 +70,6 @@ void AVehicleBase::Tick(float DeltaTime)
 	*/
 }
 
-// Called to bind functionality to input
-void AVehicleBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}
-
 void AVehicleBase::GetCarMesh(UStaticMeshComponent* CarMesh_)
 {
 	CarMesh = CarMesh_;
@@ -89,9 +78,10 @@ void AVehicleBase::GetCarMesh(UStaticMeshComponent* CarMesh_)
 //Move forward/backward
 void AVehicleBase::Accelerate(float value_)
 {
-	if (CarMesh == nullptr) {
-		return;
-	}
+	//if (CarMesh == nullptr) {
+	//	//return FVector().ZeroVector;
+	//	return;
+	//}
 
 	//Checks button presses
 	if (value_ > 0.0f) isForwardPressed = true;
@@ -100,7 +90,7 @@ void AVehicleBase::Accelerate(float value_)
 	//If on the Air then just let residual velocity takes over
 	if (!isGrounded) {
 		//Don't do anything...maybe?
-		return;
+		//return FVector().ZeroVector;
 	}
 
 	//Accel and Reverse
@@ -144,10 +134,6 @@ void AVehicleBase::Accelerate(float value_)
 			velLinear = velLinear + counterForce;
 		}
 
-
-
-
-
 		CarMesh->SetPhysicsLinearVelocity(velLinear, true);
 
 		timeElapsedLin = 1.0f;
@@ -167,17 +153,19 @@ void AVehicleBase::Accelerate(float value_)
 	}
 
 	timeElapsedLin += FApp::GetFixedDeltaTime() / 1.0f;
+
+	//return velLinear;
 }
 
 //Turn vehicle
 void AVehicleBase::Turn(float value_)
 {
-	if (CarMesh == nullptr) {
-		return;
-	}
+	/*if (CarMesh == nullptr) {
+		return FVector().ZeroVector;
+	}*/
 
 	//Checks button presses
-	turningDir = value_;
+	turningDir = 1.0f / value_;
 
 	//Calculate ratio to affect when and how fast the vehicle can turn
 	float turningRate;
@@ -186,7 +174,7 @@ void AVehicleBase::Turn(float value_)
 		turningRate = 0.0f;
 	}
 	else {
-		turningRate = GetSpeed() / (speedMax * 10.0f);
+		turningRate = GetSpeed() / (speedMax * 5.0f);
 	}
 
 	//Rotation when moving forward
@@ -194,10 +182,10 @@ void AVehicleBase::Turn(float value_)
 
 		velAngular.X = 0.0f;
 		velAngular.Y = 0.0f;
-		velAngular.Z = (torque / mass) * value_ * turningRate;
+		velAngular.Z = (torque / mass) * turningDir * turningRate;
 
 		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
-		timeElapsedRot = 1.0f;
+		timeElapsedRot = 2.0f;
 	}
 
 	//Rotation when reversing
@@ -205,13 +193,14 @@ void AVehicleBase::Turn(float value_)
 
 		velAngular.X = 0.0f;
 		velAngular.Y = 0.0f;
-		velAngular.Z = -(torque / mass) * value_ * turningRate;
+		velAngular.Z = -(torque / mass) * turningDir * turningRate;
+
 
 		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
-		timeElapsedRot = 1.0f;
+		timeElapsedRot = 2.0f;
 	}
 
-	//Residual angular drag when no longer receives input
+	//Residual angular drag when no longer receiving input
 	if (value_ == 0.0f) {
 		if (velAngular.Z != 0.0f) {
 			velAngular.Z /= timeElapsedRot;
@@ -224,6 +213,8 @@ void AVehicleBase::Turn(float value_)
 	if (handling <= 0.0f) handling = SMALLVAL;
 
 	timeElapsedRot += FApp::GetFixedDeltaTime() / (handlingRange / handling);
+
+	//return velAngular;
 }
 
 void AVehicleBase::HandBrake()
@@ -241,31 +232,31 @@ void AVehicleBase::Jump()
 	//Can jump only when on the ground
 	if (isGrounded) {
 		jumpForce.Z = 60000.0 / mass;
-		CarMesh->SetPhysicsLinearVelocity(jumpForce, true);
 
-		jumpState = true;
+		isJumping = true;
 		timeElapsedAir = 0.0f;
+
+		CarMesh->SetPhysicsLinearVelocity(jumpForce, true);
+		//return jumpForce;
 	}
+	//return FVector().ZeroVector;
 }
 
-void AVehicleBase::FallingState()
+void AVehicleBase::respawn(ACheckpoint *checkpoint)
 {
-	if (!jumpState) {
-		return;
+	if (checkpoint->index == location) {
+		CarMesh->SetWorldLocation(checkpoint->GetActorLocation());
+		CarMesh->SetWorldRotation(checkpoint->GetActorRotation());
+		velAngular.Set(0, 0, 0);
+		velLinear.Set(0, 0, 0);
+		accelAngular.Set(0, 0, 0);
+		accelLinear.Set(0, 0, 0);
+		timeElapsedAcc = 0;
+		timeElapsedLin = 0;
+		timeElapsedRot = 0;
+		CarMesh->SetPhysicsLinearVelocity(FVector(0, 0, 0));
+		CarMesh->SetPhysicsAngularVelocityInDegrees(FVector(0, 0, 0));
 	}
-
-	//While in the air...
-	if (!isGrounded) {
-		timeElapsedAir += FApp::GetFixedDeltaTime();
-	}
-
-	if (isGrounded) {
-		jumpState = false;
-	}
-
-	//Accelerate gravity
-	//jumpForce.Z = -12000.0f * timeElapsedAir;
-	//CarMesh->SetPhysicsLinearVelocity(jumpForce, true);
 }
 
 void AVehicleBase::UseItem()
@@ -320,15 +311,104 @@ FVector AVehicleBase::GetRotation()
 	return CarMesh->GetPhysicsAngularVelocityInDegrees();
 }
 
+void AVehicleBase::DoDamage(int value_)
+{
+	if (value_ <= 0) return;
+	if (health - value_ <= 0) health = 0;
+	else health -= value_;
+}
+
+inline void AVehicleBase::DoHeal(int value_)
+{
+	if (value_ <= 0) return;
+	if (health + value_ >= healthMax) health = healthMax;
+	else health += value_;
+}
+
+int AVehicleBase::GetHealth()
+{
+	return health;
+}
+
+void AVehicleBase::SetMaxHealth(int value_)
+{
+	if (value_ > 0) healthMax = value_;
+}
+
+int AVehicleBase::GetMaxHealth()
+{
+	return healthMax;
+}
+
+void AVehicleBase::SetMass(float value_)
+{
+	if (value_ > 0.0f) mass = value_;
+}
+
 inline float AVehicleBase::GetMass()
 {
 	if (CarMesh == nullptr) return 0.0f;
 	return CarMesh->GetMass();
 }
 
-void AVehicleBase::SwitchVelocityAxis() {
-	FVector previous = CarMesh->GetPhysicsLinearVelocity;
-	velLinear.Set(previous.Y, previous.X, previous.Z);
+void AVehicleBase::SetAttack(int value_)
+{
+	attack = value_;
+}
+
+int AVehicleBase::GetAttack()
+{
+	return attack;
+}
+
+void AVehicleBase::SetDefense(int value_)
+{
+	defense = value_;
+}
+
+int AVehicleBase::GetDefense()
+{
+	return defense;
+}
+
+void AVehicleBase::SetTraction(float value_)
+{
+	traction = value_;
+}
+
+inline float AVehicleBase::GetTraction()
+{
+	return traction;
+}
+
+inline void AVehicleBase::SetHandling(float value_)
+{
+	handling = value_;
+}
+
+inline float AVehicleBase::GetHandling()
+{
+	return handling;
+}
+
+inline void AVehicleBase::SetAccelerationRate(float value_)
+{
+	if (value_ > 0.0f) accelerationRate = value_;
+}
+
+inline float AVehicleBase::GetAccelerationRate()
+{
+	return accelerationRate;
+}
+
+inline void AVehicleBase::SetAccelerationDecay(float value_)
+{
+	if (value_ > 0.0f) accelerationDecay = value_;
+}
+
+inline float AVehicleBase::GetAccelerationDecay()
+{
+	return accelerationDecay;
 }
 
 bool AVehicleBase::isMovingForward()

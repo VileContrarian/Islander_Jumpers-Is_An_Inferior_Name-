@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Checkpoint.h"
 #include "GameFramework/Pawn.h"
 #include "AVehicleBase.generated.h"
 
@@ -26,18 +27,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-
 	///Game Codes////////////////////////////////////////////////// 
 
 public:
 	///Components
-
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	//	class USceneComponent* Root;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		class UStaticMeshComponent* CarMesh;
 
@@ -92,7 +85,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float handling;
 
-	//Determines the friction when drifting
+	//Affects drifting
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float driftGrip;
 
@@ -103,6 +96,10 @@ public:
 	//Ground check derive from thrusters
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		bool isGrounded;
+
+	//Current checkpoint
+	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
+		uint8 location;
 
 	///Methods
 
@@ -138,56 +135,83 @@ public:
 		void HandleEvents();
 
 	//This method is used to get Scalar value of velocity (e.g. for Speedometer)
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintPure)
 		float GetSpeed();
 
 	UFUNCTION(BlueprintCallable)
-		void FallingState();
-
-
-	UFUNCTION(BlueprintCallable)
-		void SwitchVelocityAxis();
+		void respawn(ACheckpoint *checkpoint);
 
 
 	/// Getters and Setters
+	UFUNCTION(BlueprintCallable)
+		void SetPosition(FVector vec_);
 
-	void SetPosition(FVector vec_);
-	FVector GetPosition();
+	UFUNCTION(BlueprintCallable)
+		FVector GetPosition();
 
-	void SetRotation(FVector vec_);
-	FVector GetRotation();
+	UFUNCTION(BlueprintCallable)
+		void SetRotation(FVector vec_);
+
+	UFUNCTION(BlueprintCallable)
+		FVector GetRotation();
 
 	//Heal and damage 
-	inline void SetHealth(int value_) {
-		if (health + value_ <= 0) health = 0;
-		if (health + value_ >= healthMax) health = healthMax;
-		else health += value_;
-	}
-	inline int GetHealth() const { return health; }
+	UFUNCTION(BlueprintCallable)
+		void DoDamage(int value_);
 
-	inline void SetMaxHealth(int value_) { if (value_ > 0) healthMax = value_; }
-	inline int GetMaxHealth() const { return healthMax; }
+	UFUNCTION(BlueprintCallable)
+		void DoHeal(int value_);
 
-	inline void SetMass(float value_) { if (value_ > 0.0f) mass = value_; }
-	inline float GetMass();
+	UFUNCTION(BlueprintPure)
+		int GetHealth();
 
-	inline void SetAttack(int value_) { attack = value_; }
-	inline int GetAttack() const { return attack; }
+	UFUNCTION(BlueprintCallable)
+		void SetMaxHealth(int value_);
 
-	inline void SetDefense(int value_) { defense = value_; }
-	inline int GetDefense() const { return defense; }
+	UFUNCTION(BlueprintPure)
+		int GetMaxHealth();
 
-	inline void SetTraction(float value_) { traction = value_; }
-	inline float GetTraction() const { return traction; }
+	UFUNCTION(BlueprintCallable)
+		void SetMass(float value_);
 
-	inline void SetHandling(float value_) { handling = value_; }
-	inline float GetHandling() const { return handling; }
+	UFUNCTION(BlueprintPure)
+		float GetMass();
 
-	inline void SetAccelerationRate(float value_) { if (value_ > 0.0f) accelerationRate = value_; }
-	inline float GetAccelerationRate() { return accelerationRate; }
+	UFUNCTION(BlueprintCallable)
+		void SetAttack(int value_);
 
-	inline void SetAccelerationDecay(float value_) { if (value_ > 0.0f) accelerationDecay = value_; }
-	inline float GetAccelerationDecay() { return accelerationDecay; }
+	UFUNCTION(BlueprintPure)
+		int GetAttack();
+
+	UFUNCTION(BlueprintCallable)
+		void SetDefense(int value_);
+
+	UFUNCTION(BlueprintPure)
+		int GetDefense();
+
+	UFUNCTION(BlueprintCallable)
+		void SetTraction(float value_);
+
+	UFUNCTION(BlueprintPure)
+		float GetTraction();
+
+	UFUNCTION(BlueprintCallable)
+		void SetHandling(float value_);
+
+	UFUNCTION(BlueprintPure)
+		float GetHandling();
+
+	UFUNCTION(BlueprintCallable)
+		void SetAccelerationRate(float value_);
+
+	UFUNCTION(BlueprintPure)
+		float GetAccelerationRate();
+
+	UFUNCTION(BlueprintCallable)
+		void SetAccelerationDecay(float value_);
+
+	UFUNCTION(BlueprintPure)
+		float GetAccelerationDecay();
 
 
 private:
@@ -238,7 +262,7 @@ private:
 	///Support functionality
 	bool isForwardPressed;
 	bool isTurning;
-	bool jumpState;
+	bool isJumping;
 	float initialTraction;
 
 	bool isMovingForward();
