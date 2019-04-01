@@ -62,7 +62,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float torque;
 
-	//Set maximum speed limit [Default is 300.0f]
+	//Set maximum speed limit [Default is 3000.0f]
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float speedMax;
 
@@ -105,11 +105,11 @@ public:
 
 	//Moves vehicle forward/backward
 	UFUNCTION(BlueprintCallable)
-		FVector Accelerate(float value_);
+		void Accelerate(float value_);
 
 	//Turn vehicle
 	UFUNCTION(BlueprintCallable)
-		FVector Turn(float value_);
+		void Turn(float value_);
 
 	//Assign the mesh in the Blueprint by calling this function
 	//Without assigning a Car/Body mesh it can't use the physics from this C++
@@ -123,7 +123,7 @@ public:
 		void ReleaseHandBrake();
 
 	UFUNCTION(BlueprintCallable)
-		FVector Jump();
+		void Jump();
 
 	UFUNCTION(BlueprintCallable)
 		void UseItem();

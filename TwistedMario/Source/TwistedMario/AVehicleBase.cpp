@@ -31,7 +31,7 @@ void AVehicleBase::BeginPlay()
 	if (force <= 0.0f) force = 10000.0f;
 	if (torque <= 0.0f) torque = 250.0f;
 
-	if (speedMax <= 0.0f) speedMax = 300.0f;
+	if (speedMax <= 0.0f) speedMax = 3000.0f;
 	if (accelerationRate <= 0.0f) accelerationRate = 0.008f;
 	if (accelerationDecay <= 0.0f) accelerationDecay = 50.0f;
 	if (traction <= 0.0f) traction = 100.0f;
@@ -76,10 +76,11 @@ void AVehicleBase::GetCarMesh(UStaticMeshComponent* CarMesh_)
 }
 
 //Move forward/backward
-FVector AVehicleBase::Accelerate(float value_)
+void AVehicleBase::Accelerate(float value_)
 {
 	if (CarMesh == nullptr) {
-		return FVector().ZeroVector;
+		return;
+		//return FVector().ZeroVector;
 	}
 
 	//Checks button presses
@@ -89,14 +90,14 @@ FVector AVehicleBase::Accelerate(float value_)
 	//If on the Air then just let residual velocity takes over
 	if (!isGrounded) {
 		//Don't do anything...maybe?
-		return FVector().ZeroVector;
+		//return FVector().ZeroVector;
 	}
 
 	//Accel and Reverse
 	if (value_ != 0.0f) {
 
 		//Speed Limit condition
-		if (GetSpeed() < speedMax * 10.0f) {
+		if (GetSpeed() < speedMax) {
 			timeElapsedAcc += accelerationRate;
 
 			velLinear.X = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().X;
@@ -133,7 +134,7 @@ FVector AVehicleBase::Accelerate(float value_)
 			velLinear = velLinear + counterForce;
 		}
 
-		//CarMesh->SetPhysicsLinearVelocity(velLinear, true);
+		CarMesh->SetPhysicsLinearVelocity(velLinear, true);
 
 		timeElapsedLin = 1.0f;
 	}
@@ -146,21 +147,22 @@ FVector AVehicleBase::Accelerate(float value_)
 		velLinear.X = -CarMesh->GetComponentVelocity().X / (accelDecayRange * 10.0f / accelerationDecay);
 		velLinear.Y = -CarMesh->GetComponentVelocity().Y / (accelDecayRange * 10.0f / accelerationDecay);
 
-		//CarMesh->SetPhysicsLinearVelocity(velLinear, true);
+		CarMesh->SetPhysicsLinearVelocity(velLinear, true);
 
 		timeElapsedAcc = 0.0f;	//Reset acceleration rate
 	}
 
 	timeElapsedLin += FApp::GetFixedDeltaTime() / 1.0f;
 
-	return velLinear;
+	//return velLinear;
 }
 
 //Turn vehicle
-FVector AVehicleBase::Turn(float value_)
+void AVehicleBase::Turn(float value_)
 {
 	if (CarMesh == nullptr) {
-		return FVector().ZeroVector;
+		return;
+		//return FVector().ZeroVector;
 	}
 
 	//Checks button presses
@@ -173,7 +175,7 @@ FVector AVehicleBase::Turn(float value_)
 		turningRate = 0.0f;
 	}
 	else {
-		turningRate = GetSpeed() / (speedMax * 5.0f);
+		turningRate = GetSpeed() / speedMax;
 	}
 
 	//Rotation when moving forward
@@ -183,7 +185,7 @@ FVector AVehicleBase::Turn(float value_)
 		velAngular.Y = 0.0f;
 		velAngular.Z = (torque / mass) * turningDir * turningRate;
 
-		//CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
+		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
 		timeElapsedRot = 2.0f;
 	}
 
@@ -195,7 +197,7 @@ FVector AVehicleBase::Turn(float value_)
 		velAngular.Z = -(torque / mass) * turningDir * turningRate;
 
 
-		//CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
+		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
 		timeElapsedRot = 2.0f;
 	}
 
@@ -205,7 +207,7 @@ FVector AVehicleBase::Turn(float value_)
 			velAngular.Z /= timeElapsedRot;
 		}
 
-		//CarMesh->SetPhysicsAngularVelocityInRadians(velAngular, true);
+		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular, true);
 	}
 
 	if (handling > handlingRange) handling = handlingRange;
@@ -213,7 +215,7 @@ FVector AVehicleBase::Turn(float value_)
 
 	timeElapsedRot += FApp::GetFixedDeltaTime() / (handlingRange / handling);
 
-	return velAngular;
+	//return velAngular;
 }
 
 void AVehicleBase::HandBrake()
@@ -226,7 +228,7 @@ void AVehicleBase::ReleaseHandBrake()
 	traction = initialTraction;
 }
 
-FVector AVehicleBase::Jump()
+void AVehicleBase::Jump()
 {
 	//Can jump only when on the ground
 	if (isGrounded) {
@@ -235,10 +237,10 @@ FVector AVehicleBase::Jump()
 		isJumping = true;
 		timeElapsedAir = 0.0f;
 		
-		//CarMesh->SetPhysicsLinearVelocity(jumpForce, true);
-		return jumpForce;
+		CarMesh->SetPhysicsLinearVelocity(jumpForce, true);
+		//return jumpForce;
 	}
-	return FVector().ZeroVector;
+	//return FVector().ZeroVector;
 }
 
 void AVehicleBase::respawn(ACheckpoint *checkpoint)
