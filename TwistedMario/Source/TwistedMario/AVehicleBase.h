@@ -32,6 +32,9 @@ public:
 public:
 	///Components
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		class USceneComponent* Root;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		class UStaticMeshComponent* CarMesh;
 
 	///Variables

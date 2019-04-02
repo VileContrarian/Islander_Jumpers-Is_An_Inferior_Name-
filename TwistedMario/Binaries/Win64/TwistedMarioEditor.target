@@ -18,11 +18,11 @@
 	"Launch": "$(EngineDir)/Binaries/Win64/UE4Editor.exe",
 	"BuildProducts": [
 		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-TwistedMario-1717.dll",
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-TwistedMario-499.dll",
 			"Type": "DynamicLibrary"
 		},
 		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-TwistedMario-1717.pdb",
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-TwistedMario-499.pdb",
 			"Type": "SymbolFile"
 		},
 		{
