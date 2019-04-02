@@ -93,7 +93,7 @@ void AVehicleBase::Accelerate(float value_)
 	//If on the Air then just let residual velocity takes over
 	if (!isGrounded) {
 		//Don't do anything...maybe?
-		//return FVector().ZeroVector;
+		return;
 	}
 
 	//Accel and Reverse
@@ -105,7 +105,9 @@ void AVehicleBase::Accelerate(float value_)
 
 			velLinear.X = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().X;
 			velLinear.Y = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().Y;
-			velLinear.Z = 0.0f;
+			velLinear.Z = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().Z * 0.5f;
+			
+			//velLinear.Z = 0.0f;
 		}
 
 		else
