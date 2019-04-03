@@ -92,6 +92,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float driftGrip;
 
+	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
+		float climbSpeed;
+
 	// Keep track of laps completed
 	UPROPERTY(EditAnywhere)
 		uint8 lapCounter;

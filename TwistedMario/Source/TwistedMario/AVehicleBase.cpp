@@ -47,6 +47,7 @@ void AVehicleBase::BeginPlay()
 	handlingRange = 100.0f;
 	gripForce = 0.1f;
 	driftGrip = 1.0f;
+	climbSpeed = 0.5f;
 	initialTraction = traction;
 	isGrounded = true;
 }
@@ -57,9 +58,9 @@ void AVehicleBase::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	/*Debug Logs
-	FVector debugVel;
-	debugVel = CarMesh->GetComponentVelocity();
-	//UE_LOG(LogWindows, Warning, TEXT("Velocity : %f, %f, %f"), debugVel.X, debugVel.Y, debugVel.Z)
+	FRotator debugVel;
+	debugVel = CarMesh->GetComponentRotation();
+	UE_LOG(LogWindows, Warning, TEXT("Velocity : %f, %f, %f"), debugVel.Roll, debugVel.Pitch, debugVel.Yaw)
 	//UE_LOG(LogWindows, Warning, TEXT("Velocity : %f, %f, %f"), sideForce.X, sideForce.Y, sideForce.Z)
 	*/
 
@@ -103,9 +104,11 @@ void AVehicleBase::Accelerate(float value_)
 		if (GetSpeed() < speedMax) {
 			timeElapsedAcc += accelerationRate;
 
+			//float angularOrientation;
+
 			velLinear.X = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().X;
 			velLinear.Y = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().Y;
-			velLinear.Z = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().Z * 0.5f;
+			velLinear.Z = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().Z * climbSpeed;
 			
 			//velLinear.Z = 0.0f;
 		}
@@ -199,7 +202,7 @@ void AVehicleBase::Turn(float value_)
 
 		velAngular.X = 0.0f;
 		velAngular.Y = 0.0f;
-		velAngular.Z = -(torque / mass) * turningDir * turningRate;
+		velAngular.Z = -(torque / mass) * turningDir * (turningRate + 0.75f);
 
 
 		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
