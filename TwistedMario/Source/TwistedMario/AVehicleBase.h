@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Checkpoint.h"
 #include "GameFramework/Pawn.h"
 #include "AVehicleBase.generated.h"
 
@@ -27,10 +26,15 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	// Called to bind functionality to input
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+
 	///Game Codes////////////////////////////////////////////////// 
 
 public:
 	///Components
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		class USceneComponent* Root;
 
@@ -65,7 +69,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float torque;
 
-	//Set maximum speed limit [Default is 3000.0f]
+	//Set maximum speed limit [Default is 300.0f]
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float speedMax;
 
@@ -92,19 +96,16 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float driftGrip;
 
-	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
-		float climbSpeed;
-
 	// Keep track of laps completed
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere)
 		uint8 lapCounter;
 
 	//Ground check derive from thrusters
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		bool isGrounded;
 
-	//Current checkpoint
-	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
+	//Ground check derive from thrusters
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		uint8 location;
 
 	///Methods
@@ -141,11 +142,11 @@ public:
 		void HandleEvents();
 
 	//This method is used to get Scalar value of velocity (e.g. for Speedometer)
-	UFUNCTION(BlueprintPure)
+	UFUNCTION(BlueprintCallable)
 		float GetSpeed();
 
 	UFUNCTION(BlueprintCallable)
-		void respawn(ACheckpoint *checkpoint);
+		void FallingState();
 
 
 	/// Getters and Setters
@@ -168,55 +169,55 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void DoHeal(int value_);
 
-	UFUNCTION(BlueprintPure)
+	UFUNCTION(BlueprintCallable)
 		int GetHealth();
 
 	UFUNCTION(BlueprintCallable)
 		void SetMaxHealth(int value_);
 
-	UFUNCTION(BlueprintPure)
+	UFUNCTION(BlueprintCallable)
 		int GetMaxHealth();
 
 	UFUNCTION(BlueprintCallable)
 		void SetMass(float value_);
 
-	UFUNCTION(BlueprintPure)
+	UFUNCTION(BlueprintCallable)
 		float GetMass();
 
 	UFUNCTION(BlueprintCallable)
 		void SetAttack(int value_);
 
-	UFUNCTION(BlueprintPure)
+	UFUNCTION(BlueprintCallable)
 		int GetAttack();
 
 	UFUNCTION(BlueprintCallable)
 		void SetDefense(int value_);
 
-	UFUNCTION(BlueprintPure)
+	UFUNCTION(BlueprintCallable)
 		int GetDefense();
 
 	UFUNCTION(BlueprintCallable)
 		void SetTraction(float value_);
 
-	UFUNCTION(BlueprintPure)
+	UFUNCTION(BlueprintCallable)
 		float GetTraction();
 
 	UFUNCTION(BlueprintCallable)
 		void SetHandling(float value_);
 
-	UFUNCTION(BlueprintPure)
+	UFUNCTION(BlueprintCallable)
 		float GetHandling();
 
 	UFUNCTION(BlueprintCallable)
 		void SetAccelerationRate(float value_);
 
-	UFUNCTION(BlueprintPure)
+	UFUNCTION(BlueprintCallable)
 		float GetAccelerationRate();
 
 	UFUNCTION(BlueprintCallable)
 		void SetAccelerationDecay(float value_);
 
-	UFUNCTION(BlueprintPure)
+	UFUNCTION(BlueprintCallable)
 		float GetAccelerationDecay();
 
 
@@ -268,7 +269,7 @@ private:
 	///Support functionality
 	bool isForwardPressed;
 	bool isTurning;
-	bool isJumping;
+	bool jumpState;
 	float initialTraction;
 
 	bool isMovingForward();
