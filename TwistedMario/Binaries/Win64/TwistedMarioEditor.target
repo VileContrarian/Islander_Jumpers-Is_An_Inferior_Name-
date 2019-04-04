@@ -6,8 +6,8 @@
 	{
 		"MajorVersion": 4,
 		"MinorVersion": 21,
-		"PatchVersion": 2,
-		"Changelist": 4753647,
+		"PatchVersion": 1,
+		"Changelist": 4613538,
 		"CompatibleChangelist": 4541578,
 		"IsLicenseeVersion": 0,
 		"IsPromotedBuild": 1,
@@ -18,6 +18,7 @@
 	"Launch": "$(EngineDir)/Binaries/Win64/UE4Editor.exe",
 	"BuildProducts": [
 		{
+<<<<<<< HEAD
 			"Path": "$(EngineDir)/Binaries/Win64/UE4Editor.exe",
 			"Type": "Executable"
 		},
@@ -4238,317 +4239,303 @@
 		{
 			"Path": "$(EngineDir)/Content/Slate/Icons/icon_redo_16px.png",
 			"Type": "UFS"
+=======
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-TwistedMario-664.dll",
+			"Type": "DynamicLibrary"
+>>>>>>> origin/Mechanics-Prototype
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/icon_tab_toolbar_16px.png",
-			"Type": "UFS"
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-TwistedMario-664.pdb",
+			"Type": "SymbolFile"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/icon_tab_WidgetReflector_16x.png",
-			"Type": "UFS"
+			"Path": "$(EngineDir)/Binaries/Win64/UE4Editor.version",
+			"Type": "BuildResource"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/icon_tab_WidgetReflector_40x.png",
-			"Type": "UFS"
-		},
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor.modules",
+			"Type": "RequiredResource"
+		}
+	],
+	"RuntimeDependencies": [
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/icon_undo_16px.png",
+			"Path": "$(ProjectDir)/TwistedMario.uproject",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/icon_warning_16x.png",
+			"Path": "$(EngineDir)/Plugins/Runtime/ApexDestruction/ApexDestruction.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/NextIcon.png",
+			"Path": "$(EngineDir)/Plugins/2D/Paper2D/Paper2D.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/notificationlist_fail.png",
+			"Path": "$(EngineDir)/Plugins/AI/AISupport/AISupport.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/notificationlist_success.png",
+			"Path": "$(EngineDir)/Plugins/Blendables/LightPropagationVolume/LightPropagationVolume.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PlusSymbol_12x.png",
+			"Path": "$(EngineDir)/Plugins/Developer/ActorLayerUtilities/ActorLayerUtilities.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/toolbar_expand_16x.png",
+			"Path": "$(EngineDir)/Plugins/Developer/CLionSourceCodeAccess/CLionSourceCodeAccess.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/TrashCan.png",
+			"Path": "$(EngineDir)/Plugins/Developer/GitSourceControl/GitSourceControl.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/TrashCan_Small.png",
+			"Path": "$(EngineDir)/Plugins/Developer/PerforceSourceControl/PerforceSourceControl.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/Edit/icon_Edit_Copy_16x.png",
+			"Path": "$(EngineDir)/Plugins/Developer/SubversionSourceControl/SubversionSourceControl.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/Edit/icon_Edit_Cut_16x.png",
+			"Path": "$(EngineDir)/Plugins/Developer/UObjectPlugin/UObjectPlugin.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/Edit/icon_Edit_Delete_16x.png",
+			"Path": "$(EngineDir)/Plugins/Developer/VisualStudioCodeSourceCodeAccess/VisualStudioCodeSourceCodeAccess.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/Edit/icon_Edit_Duplicate_16x.png",
+			"Path": "$(EngineDir)/Plugins/Developer/VisualStudioSourceCodeAccess/VisualStudioSourceCodeAccess.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/Edit/icon_Edit_Paste_16x.png",
+			"Path": "$(EngineDir)/Plugins/Editor/AssetManagerEditor/AssetManagerEditor.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/Edit/icon_Edit_Rename_16x.png",
+			"Path": "$(EngineDir)/Plugins/Editor/CryptoKeys/CryptoKeys.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/SmallRoundedButton.png",
+			"Path": "$(EngineDir)/Plugins/Editor/DataValidation/DataValidation.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/SmallRoundedButtonBottom.png",
+			"Path": "$(EngineDir)/Plugins/Editor/FacialAnimation/FacialAnimation.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/SmallRoundedButtonCentre.png",
+			"Path": "$(EngineDir)/Plugins/Editor/GameplayTagsEditor/GameplayTagsEditor.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/SmallRoundedButtonLeft.png",
+			"Path": "$(EngineDir)/Plugins/Editor/MeshEditor/MeshEditor.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/SmallRoundedButtonRight.png",
+			"Path": "$(EngineDir)/Plugins/Runtime/EditableMesh/EditableMesh.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/SmallRoundedButtonTop.png",
+			"Path": "$(EngineDir)/Plugins/Editor/MobileLauncherProfileWizard/MobileLauncherProfileWizard.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/WindowButton_025x_Hovered.png",
+			"Path": "$(EngineDir)/Plugins/Editor/PluginBrowser/PluginBrowser.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/WindowButton_025x_Normal.png",
+			"Path": "$(EngineDir)/Plugins/Editor/SpeedTreeImporter/SpeedTreeImporter.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/WindowButton_025x_Pressed.png",
+			"Path": "$(EngineDir)/Plugins/Enterprise/DatasmithContent/DatasmithContent.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/WindowButton_05x_Hovered.png",
+			"Path": "$(EngineDir)/Plugins/Enterprise/VariantManagerContent/VariantManagerContent.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/WindowButton_05x_Normal.png",
+			"Path": "$(EngineDir)/Plugins/Experimental/AlembicImporter/AlembicImporter.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/WindowButton_05x_Pressed.png",
+			"Path": "$(EngineDir)/Plugins/Experimental/GeometryCache/GeometryCache.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/WindowButton_1x_Hovered.png",
+			"Path": "$(EngineDir)/Plugins/Experimental/AppleImageUtils/AppleImageUtils.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/WindowButton_1x_Normal.png",
+			"Path": "$(EngineDir)/Plugins/Experimental/AppleVision/AppleVision.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/WindowButton_1x_Pressed.png",
+			"Path": "$(EngineDir)/Plugins/Experimental/BackChannel/BackChannel.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/WindowButton_Screen_Rotation_Hovered.png",
+			"Path": "$(EngineDir)/Plugins/Experimental/CharacterAI/CharacterAI.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/WindowButton_Screen_Rotation_Normal.png",
+			"Path": "$(EngineDir)/Plugins/Experimental/HTML5Networking/HTML5Networking.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Icons/PIEWindow/WindowButton_Screen_Rotation_Pressed.png",
+			"Path": "$(EngineDir)/Plugins/Experimental/ProxyLODPlugin/ProxyLODPlugin.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/MessageLog/Log_Error.png",
+			"Path": "$(EngineDir)/Plugins/Lumin/MagicLeap/MagicLeap.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/MessageLog/Log_Note.png",
+			"Path": "$(EngineDir)/Plugins/Runtime/ProceduralMeshComponent/ProceduralMeshComponent.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/MessageLog/Log_Warning.png",
+			"Path": "$(EngineDir)/Plugins/Lumin/MagicLeapMedia/MagicLeapMedia.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/Border.PNG",
+			"Path": "$(EngineDir)/Plugins/Media/AndroidMedia/AndroidMedia.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/Button.png",
+			"Path": "$(EngineDir)/Plugins/Media/AvfMedia/AvfMedia.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/DashedBorder.png",
+			"Path": "$(EngineDir)/Plugins/Media/ImgMedia/ImgMedia.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/HyperlinkDotted.png",
+			"Path": "$(EngineDir)/Plugins/Media/LinearTimecode/LinearTimecode.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/HyperlinkUnderline.png",
+			"Path": "$(EngineDir)/Plugins/Media/MediaCompositing/MediaCompositing.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/Menu_Background.png",
+			"Path": "$(EngineDir)/Plugins/Media/MediaPlayerEditor/MediaPlayerEditor.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/Menu_Background_Inverted_Border_Bold.png",
+			"Path": "$(EngineDir)/Plugins/Media/WmfMedia/WmfMedia.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/Notification_Border_Flash.png",
+			"Path": "$(EngineDir)/Plugins/Messaging/TcpMessaging/TcpMessaging.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/ToolBar_Background.png",
+			"Path": "$(EngineDir)/Plugins/Messaging/UdpMessaging/UdpMessaging.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/ToolTip_Background.png",
+			"Path": "$(EngineDir)/Plugins/MovieScene/ActorSequence/ActorSequence.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/ToolTip_BrightBackground.png",
+			"Path": "$(EngineDir)/Plugins/MovieScene/LevelSequenceEditor/LevelSequenceEditor.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/White.png",
+			"Path": "$(EngineDir)/Plugins/MovieScene/MatineeToLevelSequence/MatineeToLevelSequence.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Testing/BrushWireframe.png",
+			"Path": "$(EngineDir)/Plugins/NetcodeUnitTest/NetcodeUnitTest/NetcodeUnitTest.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Testing/DefaultPawn_16px.png",
+			"Path": "$(EngineDir)/Plugins/NetcodeUnitTest/NUTUnrealEngine4/NUTUnrealEngine4.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Testing/FlatColorSquare.png",
+			"Path": "$(EngineDir)/Plugins/Online/Android/OnlineSubsystemGooglePlay/OnlineSubsystemGooglePlay.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Testing/GammaReference.png",
+			"Path": "$(EngineDir)/Plugins/Online/OnlineSubsystem/OnlineSubsystem.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Testing/Hyperlink.png",
+			"Path": "$(EngineDir)/Plugins/Runtime/AndroidPermission/AndroidPermission.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Testing/Lit.png",
+			"Path": "$(EngineDir)/Plugins/Online/IOS/OnlineSubsystemIOS/OnlineSubsystemIOS.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Testing/NewLevelBlank.png",
+			"Path": "$(EngineDir)/Plugins/Online/OnlineSubsystemNull/OnlineSubsystemNull.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Testing/TestRotation.png",
+			"Path": "$(EngineDir)/Plugins/Online/OnlineSubsystemUtils/OnlineSubsystemUtils.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Testing/UE4Icon.png",
+			"Path": "$(EngineDir)/Plugins/Portal/LauncherChunkInstaller/LauncherChunkInstaller.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Testing/Unlit.png",
+			"Path": "$(EngineDir)/Plugins/Runtime/AndroidDeviceProfileSelector/AndroidDeviceProfileSelector.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Testing/Wireframe.png",
+			"Path": "$(EngineDir)/Plugins/Runtime/ArchVisCharacter/ArchVisCharacter.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Tutorials/TutorialBorder.png",
+			"Path": "$(EngineDir)/Plugins/Runtime/AudioCapture/AudioCapture.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Tutorials/TutorialShadow.png",
+			"Path": "$(EngineDir)/Plugins/Runtime/CableComponent/CableComponent.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/SlateDebug/Fonts/LastResort.tps",
+			"Path": "$(EngineDir)/Plugins/Runtime/CustomMeshComponent/CustomMeshComponent.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/SlateDebug/Fonts/LastResort.ttf",
+			"Path": "$(EngineDir)/Plugins/Runtime/ExampleDeviceProfileSelector/ExampleDeviceProfileSelector.uplugin",
 			"Type": "UFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/ImgTec/PVRTexToolCLI.exe",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/ARM/Win32/astcenc.exe",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/Win64/embree.2.14.0.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/Win64/tbb.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/Win64/tbbmalloc.dll",
-			"Type": "NonUFS"
 		},
 		{
-			"Path": "$(EngineDir)/Shaders/StandaloneRenderer/D3D/GammaCorrectionCommon.hlsl",
+			"Path": "$(EngineDir)/Plugins/Runtime/LocationServicesBPLibrary/LocationServicesBPLibrary.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Shaders/StandaloneRenderer/D3D/SlateDefaultVertexShader.hlsl",
+			"Path": "$(EngineDir)/Plugins/Runtime/MobilePatchingUtils/MobilePatchingUtils.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Shaders/StandaloneRenderer/D3D/SlateElementPixelShader.hlsl",
+			"Path": "$(EngineDir)/Plugins/Runtime/PhysXVehicles/PhysXVehicles.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Shaders/StandaloneRenderer/OpenGL/SlateElementPixelShader.glsl",
+			"Path": "$(EngineDir)/Plugins/Runtime/RuntimePhysXCooking/RuntimePhysXCooking.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Shaders/StandaloneRenderer/OpenGL/SlateVertexShader.glsl",
+			"Path": "$(EngineDir)/Plugins/Runtime/WebMMoviePlayer/WebMMoviePlayer.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Shaders/StandaloneRenderer/OpenGL/SplashFragmentShader.glsl",
+			"Path": "$(EngineDir)/Plugins/Media/WebMMedia/WebMMedia.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Shaders/StandaloneRenderer/OpenGL/SplashVertexShader.glsl",
+			"Path": "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/WindowsMoviePlayer.uplugin",
 			"Type": "UFS"
 		}
 	],

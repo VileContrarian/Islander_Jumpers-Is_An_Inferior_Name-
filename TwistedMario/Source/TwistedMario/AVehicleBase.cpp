@@ -13,6 +13,8 @@ AVehicleBase::AVehicleBase()
 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+	SetRootComponent(Root);
 }
 
 // Called when the game starts or when spawned
@@ -31,7 +33,7 @@ void AVehicleBase::BeginPlay()
 	if (force <= 0.0f) force = 10000.0f;
 	if (torque <= 0.0f) torque = 250.0f;
 
-	if (speedMax <= 0.0f) speedMax = 300.0f;
+	if (speedMax <= 0.0f) speedMax = 3000.0f;
 	if (accelerationRate <= 0.0f) accelerationRate = 0.008f;
 	if (accelerationDecay <= 0.0f) accelerationDecay = 50.0f;
 	if (traction <= 0.0f) traction = 100.0f;
@@ -45,6 +47,7 @@ void AVehicleBase::BeginPlay()
 	handlingRange = 100.0f;
 	gripForce = 0.1f;
 	driftGrip = 1.0f;
+	climbSpeed = 0.5f;
 	initialTraction = traction;
 	isGrounded = true;
 }
@@ -55,9 +58,9 @@ void AVehicleBase::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	/*Debug Logs
-	FVector debugVel;
-	debugVel = CarMesh->GetComponentVelocity();
-	//UE_LOG(LogWindows, Warning, TEXT("Velocity : %f, %f, %f"), debugVel.X, debugVel.Y, debugVel.Z)
+	FRotator debugVel;
+	debugVel = CarMesh->GetComponentRotation();
+	UE_LOG(LogWindows, Warning, TEXT("Velocity : %f, %f, %f"), debugVel.Roll, debugVel.Pitch, debugVel.Yaw)
 	//UE_LOG(LogWindows, Warning, TEXT("Velocity : %f, %f, %f"), sideForce.X, sideForce.Y, sideForce.Z)
 	*/
 
@@ -73,13 +76,15 @@ void AVehicleBase::Tick(float DeltaTime)
 void AVehicleBase::GetCarMesh(UStaticMeshComponent* CarMesh_)
 {
 	CarMesh = CarMesh_;
+	CarMesh->SetupAttachment(Root);
 }
 
 //Move forward/backward
-FVector AVehicleBase::Accelerate(float value_)
+void AVehicleBase::Accelerate(float value_)
 {
 	if (CarMesh == nullptr) {
-		return FVector().ZeroVector;
+		return;
+		//return FVector().ZeroVector;
 	}
 
 	//Checks button presses
@@ -89,19 +94,23 @@ FVector AVehicleBase::Accelerate(float value_)
 	//If on the Air then just let residual velocity takes over
 	if (!isGrounded) {
 		//Don't do anything...maybe?
-		return FVector().ZeroVector;
+		return;
 	}
 
 	//Accel and Reverse
 	if (value_ != 0.0f) {
 
 		//Speed Limit condition
-		if (GetSpeed() < speedMax * 10.0f) {
+		if (GetSpeed() < speedMax) {
 			timeElapsedAcc += accelerationRate;
+
+			//float angularOrientation;
 
 			velLinear.X = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().X;
 			velLinear.Y = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().Y;
-			velLinear.Z = 0.0f;
+			velLinear.Z = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().Z * climbSpeed;
+			
+			//velLinear.Z = 0.0f;
 		}
 
 		else
@@ -133,7 +142,7 @@ FVector AVehicleBase::Accelerate(float value_)
 			velLinear = velLinear + counterForce;
 		}
 
-		//CarMesh->SetPhysicsLinearVelocity(velLinear, true);
+		CarMesh->SetPhysicsLinearVelocity(velLinear, true);
 
 		timeElapsedLin = 1.0f;
 	}
@@ -146,21 +155,22 @@ FVector AVehicleBase::Accelerate(float value_)
 		velLinear.X = -CarMesh->GetComponentVelocity().X / (accelDecayRange * 10.0f / accelerationDecay);
 		velLinear.Y = -CarMesh->GetComponentVelocity().Y / (accelDecayRange * 10.0f / accelerationDecay);
 
-		//CarMesh->SetPhysicsLinearVelocity(velLinear, true);
+		CarMesh->SetPhysicsLinearVelocity(velLinear, true);
 
 		timeElapsedAcc = 0.0f;	//Reset acceleration rate
 	}
 
 	timeElapsedLin += FApp::GetFixedDeltaTime() / 1.0f;
 
-	return velLinear;
+	//return velLinear;
 }
 
 //Turn vehicle
-FVector AVehicleBase::Turn(float value_)
+void AVehicleBase::Turn(float value_)
 {
 	if (CarMesh == nullptr) {
-		return FVector().ZeroVector;
+		return;
+		//return FVector().ZeroVector;
 	}
 
 	//Checks button presses
@@ -173,7 +183,7 @@ FVector AVehicleBase::Turn(float value_)
 		turningRate = 0.0f;
 	}
 	else {
-		turningRate = GetSpeed() / (speedMax * 5.0f);
+		turningRate = GetSpeed() / speedMax;
 	}
 
 	//Rotation when moving forward
@@ -183,7 +193,7 @@ FVector AVehicleBase::Turn(float value_)
 		velAngular.Y = 0.0f;
 		velAngular.Z = (torque / mass) * turningDir * turningRate;
 
-		//CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
+		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
 		timeElapsedRot = 2.0f;
 	}
 
@@ -192,10 +202,10 @@ FVector AVehicleBase::Turn(float value_)
 
 		velAngular.X = 0.0f;
 		velAngular.Y = 0.0f;
-		velAngular.Z = -(torque / mass) * turningDir * turningRate;
+		velAngular.Z = -(torque / mass) * turningDir * (turningRate + 0.75f);
 
 
-		//CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
+		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
 		timeElapsedRot = 2.0f;
 	}
 
@@ -205,7 +215,7 @@ FVector AVehicleBase::Turn(float value_)
 			velAngular.Z /= timeElapsedRot;
 		}
 
-		//CarMesh->SetPhysicsAngularVelocityInRadians(velAngular, true);
+		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular, true);
 	}
 
 	if (handling > handlingRange) handling = handlingRange;
@@ -213,7 +223,7 @@ FVector AVehicleBase::Turn(float value_)
 
 	timeElapsedRot += FApp::GetFixedDeltaTime() / (handlingRange / handling);
 
-	return velAngular;
+	//return velAngular;
 }
 
 void AVehicleBase::HandBrake()
@@ -226,7 +236,7 @@ void AVehicleBase::ReleaseHandBrake()
 	traction = initialTraction;
 }
 
-FVector AVehicleBase::Jump()
+void AVehicleBase::Jump()
 {
 	//Can jump only when on the ground
 	if (isGrounded) {
@@ -235,10 +245,10 @@ FVector AVehicleBase::Jump()
 		isJumping = true;
 		timeElapsedAir = 0.0f;
 		
-		//CarMesh->SetPhysicsLinearVelocity(jumpForce, true);
-		return jumpForce;
+		CarMesh->SetPhysicsLinearVelocity(jumpForce, true);
+		//return jumpForce;
 	}
-	return FVector().ZeroVector;
+	//return FVector().ZeroVector;
 }
 
 void AVehicleBase::respawn(ACheckpoint *checkpoint)
