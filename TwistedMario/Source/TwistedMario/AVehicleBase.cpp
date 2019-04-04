@@ -94,7 +94,7 @@ void AVehicleBase::Accelerate(float value_)
 	//If on the Air then just let residual velocity takes over
 	if (!isGrounded) {
 		//Don't do anything...maybe?
-		//return FVector().ZeroVector;
+		return;
 	}
 
 	//Accel and Reverse
@@ -465,12 +465,4 @@ float AVehicleBase::FindAngle(FVector vecA, FVector vecB)
 	angle = FMath::RadiansToDegrees(angle);
 
 	return angle;
-}
-
-void AVehicleBase::Teleport(FVector outDirection)
-{
-	//Getting Current Magnitude
-	float magnitude = CarMesh->GetPhysicsLinearVelocity().Size();
-	//Setting new velocity to the direction of a teleporter
-	CarMesh->SetPhysicsLinearVelocity(outDirection * magnitude);
 }

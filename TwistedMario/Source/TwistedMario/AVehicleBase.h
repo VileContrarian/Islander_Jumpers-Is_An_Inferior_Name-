@@ -27,7 +27,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	///Game Codes//////////////////////////////////////////////////
+	///Game Codes////////////////////////////////////////////////// 
 
 public:
 	///Components
@@ -110,11 +110,11 @@ public:
 	///Methods
 
 	//Moves vehicle forward/backward
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void Accelerate(float value_);
 
 	//Turn vehicle
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void Turn(float value_);
 
 	//Assign the mesh in the Blueprint by calling this function
@@ -122,22 +122,22 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void GetCarMesh(class UStaticMeshComponent* CarMesh_);
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void HandBrake();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void ReleaseHandBrake();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void Jump();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void UseItem();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		uint8 GetItemHeld();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void HandleEvents();
 
 	//This method is used to get Scalar value of velocity (e.g. for Speedometer)
@@ -161,7 +161,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 		FVector GetRotation();
 
-	//Heal and damage
+	//Heal and damage 
 	UFUNCTION(BlueprintCallable)
 		void DoDamage(int value_);
 
@@ -223,7 +223,7 @@ public:
 private:
 	///Variables
 
-	//Current health
+	//Current health 
 	int health;
 
 	//Simple check to calculate gripForce
