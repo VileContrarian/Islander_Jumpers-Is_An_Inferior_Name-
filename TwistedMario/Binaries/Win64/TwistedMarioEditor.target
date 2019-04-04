@@ -2,7 +2,7 @@
 	"TargetName": "TwistedMarioEditor",
 	"Platform": "Win64",
 	"Configuration": "Development",
-	"Version": 
+	"Version":
 	{
 		"MajorVersion": 4,
 		"MinorVersion": 21,

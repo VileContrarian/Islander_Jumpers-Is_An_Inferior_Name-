@@ -27,10 +27,13 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	///Game Codes////////////////////////////////////////////////// 
+	///Game Codes//////////////////////////////////////////////////
 
 public:
 	///Components
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		class USceneComponent* Root;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		class UStaticMeshComponent* CarMesh;
 
@@ -62,7 +65,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float torque;
 
-	//Set maximum speed limit [Default is 300.0f]
+	//Set maximum speed limit [Default is 3000.0f]
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float speedMax;
 
@@ -89,8 +92,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float driftGrip;
 
+	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
+		float climbSpeed;
+
 	// Keep track of laps completed
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		uint8 lapCounter;
 
 	//Ground check derive from thrusters
@@ -135,92 +141,89 @@ public:
 		void HandleEvents();
 
 	//This method is used to get Scalar value of velocity (e.g. for Speedometer)
-	UFUNCTION(BlueprintPure, Category = "Vehicle")
+	UFUNCTION(BlueprintPure)
 		float GetSpeed();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void respawn(ACheckpoint *checkpoint);
 
 
 	/// Getters and Setters
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void SetPosition(FVector vec_);
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		FVector GetPosition();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void SetRotation(FVector vec_);
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		FVector GetRotation();
 
-	//Heal and damage 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	//Heal and damage
+	UFUNCTION(BlueprintCallable)
 		void DoDamage(int value_);
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void DoHeal(int value_);
 
-	UFUNCTION(BlueprintPure, Category = "Vehicle")
+	UFUNCTION(BlueprintPure)
 		int GetHealth();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void SetMaxHealth(int value_);
 
-	UFUNCTION(BlueprintPure, Category = "Vehicle")
+	UFUNCTION(BlueprintPure)
 		int GetMaxHealth();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void SetMass(float value_);
 
-	UFUNCTION(BlueprintPure, Category = "Vehicle")
+	UFUNCTION(BlueprintPure)
 		float GetMass();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void SetAttack(int value_);
 
-	UFUNCTION(BlueprintPure, Category = "Vehicle")
+	UFUNCTION(BlueprintPure)
 		int GetAttack();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void SetDefense(int value_);
 
-	UFUNCTION(BlueprintPure, Category = "Vehicle")
+	UFUNCTION(BlueprintPure)
 		int GetDefense();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void SetTraction(float value_);
 
-	UFUNCTION(BlueprintPure, Category = "Vehicle")
+	UFUNCTION(BlueprintPure)
 		float GetTraction();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void SetHandling(float value_);
 
-	UFUNCTION(BlueprintPure, Category = "Vehicle")
+	UFUNCTION(BlueprintPure)
 		float GetHandling();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void SetAccelerationRate(float value_);
 
-	UFUNCTION(BlueprintPure, Category = "Vehicle")
+	UFUNCTION(BlueprintPure)
 		float GetAccelerationRate();
 
-	UFUNCTION(BlueprintCallable, Category = "Vehicle")
+	UFUNCTION(BlueprintCallable)
 		void SetAccelerationDecay(float value_);
 
-	UFUNCTION(BlueprintPure, Category = "Vehicle" )
+	UFUNCTION(BlueprintPure)
 		float GetAccelerationDecay();
-
-	UFUNCTION(BlueprintCallable, Category = "Vehicle" )
-	void Teleport(FVector outDirection);
 
 
 private:
 	///Variables
 
-	//Current health 
+	//Current health
 	int health;
 
 	//Simple check to calculate gripForce

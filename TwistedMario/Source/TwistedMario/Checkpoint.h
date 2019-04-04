@@ -26,21 +26,21 @@ public:
 	// The index of the checkpoint, so that the game can determine if
 	// the player is advancing. Also editable in the editor
 	UPROPERTY(EditAnywhere, Category = "Checkpoints")
-		int8 index;
+	int8 index;
 
 	// A boolean to determine if this is a finish line
 	UPROPERTY(EditAnywhere, Category = "Checkpoints")
-		bool Finishline;
+	bool Finishline;
 
 	// allows the box to be edited in the editor, making changing the bounds possible
 	UPROPERTY(EditAnywhere, Category = "Checkpoints")
 
-		class UBoxComponent *box;
+	class UBoxComponent *box;
 	// The method that will be called when a player collides with the finish line
 	UFUNCTION(Blueprintcallable, Category = "Checkpoints")
-		void onCrossLine(AVehicleBase *vehicle);
+	void onCrossLine(AVehicleBase *vehicle);
 	UFUNCTION(Blueprintcallable, Category = "Checkpoints")
-		uint8 getIndex();
+	uint8 getIndex();
 
 protected:
 	// Called when the game starts or when spawned
