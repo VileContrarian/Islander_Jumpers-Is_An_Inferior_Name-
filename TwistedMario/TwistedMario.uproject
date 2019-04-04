@@ -24,7 +24,6 @@
 			"Enabled": false
 		},
 		{
-<<<<<<< HEAD
 			"Name": "Niagara",
 			"Enabled": true
 		},
@@ -33,8 +32,6 @@
 			"Enabled": true
 		},
 		{
-=======
->>>>>>> origin/Mechanics
 			"Name": "ApexDestruction",
 			"Enabled": true
 		}

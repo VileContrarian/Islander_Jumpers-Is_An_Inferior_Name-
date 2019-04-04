@@ -109,11 +109,7 @@ void AVehicleBase::Accelerate(float value_)
 			velLinear.X = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().X;
 			velLinear.Y = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().Y;
 			velLinear.Z = ((force / mass) * value_) * timeElapsedAcc * CarMesh->GetForwardVector().Z * climbSpeed;
-<<<<<<< HEAD
 
-=======
-			
->>>>>>> origin/Mechanics
 			//velLinear.Z = 0.0f;
 		}
 
@@ -248,11 +244,7 @@ void AVehicleBase::Jump()
 
 		isJumping = true;
 		timeElapsedAir = 0.0f;
-<<<<<<< HEAD
 
-=======
-		
->>>>>>> origin/Mechanics
 		CarMesh->SetPhysicsLinearVelocity(jumpForce, true);
 		//return jumpForce;
 	}
