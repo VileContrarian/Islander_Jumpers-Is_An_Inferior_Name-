@@ -3,6 +3,11 @@
 #include "HealthPack.h"
 #include "AVehicleBase.h"
 
+AHealthPack::AHealthPack() 
+{
+
+}
+
 void AHealthPack::UseItem(APawn* User)
 {
 	////cast the User pawn to see if it is a vehicle
