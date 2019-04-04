@@ -96,7 +96,7 @@ public:
 		float climbSpeed;
 
 	// Keep track of laps completed
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		uint8 lapCounter;
 
 	//Ground check derive from thrusters
