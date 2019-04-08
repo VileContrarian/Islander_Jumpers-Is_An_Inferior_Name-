@@ -219,6 +219,9 @@ public:
 	UFUNCTION(BlueprintPure)
 		float GetAccelerationDecay();
 
+	UFUNCTION(BlueprintCallable)
+	void Teleport(FVector outDirection);
+
 
 private:
 	///Variables

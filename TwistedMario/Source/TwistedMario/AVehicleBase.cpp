@@ -466,3 +466,8 @@ float AVehicleBase::FindAngle(FVector vecA, FVector vecB)
 
 	return angle;
 }
+
+void AVehicleBase::Teleport(FVector outDirection) {
+	float magnitude = CarMesh->GetPhysicsLinearVelocity().Size();
+	CarMesh->SetPhysicsLinearVelocity(outDirection * magnitude);
+}
