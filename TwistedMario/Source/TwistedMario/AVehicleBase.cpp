@@ -202,7 +202,7 @@ void AVehicleBase::Turn(float value_)
 
 		velAngular.X = 0.0f;
 		velAngular.Y = 0.0f;
-		velAngular.Z = -(torque / mass) * turningDir * (turningRate + 0.75f);
+		velAngular.Z = -(torque / mass) * turningDir * (turningRate * 2.0f);
 
 
 		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
@@ -465,4 +465,9 @@ float AVehicleBase::FindAngle(FVector vecA, FVector vecB)
 	angle = FMath::RadiansToDegrees(angle);
 
 	return angle;
+}
+
+void AVehicleBase::Teleport(FVector outDirection) {
+	float magnitude = CarMesh->GetPhysicsLinearVelocity().Size();
+	CarMesh->SetPhysicsLinearVelocity(outDirection * magnitude);
 }

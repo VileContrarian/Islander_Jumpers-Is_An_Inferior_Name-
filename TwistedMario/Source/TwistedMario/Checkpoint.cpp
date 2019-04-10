@@ -25,7 +25,7 @@ void ACheckpoint::onCrossLine(AVehicleBase *vehicle)
 
 	// check if the player has crossed the finish line
 	}
-	else if (vehicle->location == (index - 1) && Finishline) {
+	else if (vehicle->location == (index - 1) && isFinishLine) {
 
 		vehicle->lapCounter++; // increment the lap
 		vehicle->location = 0; // reset the location (index)
