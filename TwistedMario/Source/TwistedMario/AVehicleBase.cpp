@@ -23,21 +23,22 @@ void AVehicleBase::BeginPlay()
 	Super::BeginPlay();
 
 	//Setting default attribute values
-	if (mass <= 0.0f) mass = 100.0f;	//In Kg
+	if (mass <= 0.0f) mass = 150.0f;	//In Kg
 	if (healthMax <= 0.0f) healthMax = 100;
 	health = healthMax;
 
 	if (attack <= 0) attack = 1;
 	if (defense <= 0) defense = 1;
 
-	if (force <= 0.0f) force = 10000.0f;
+	if (force <= 0.0f) force = 9000.0f;
 	if (torque <= 0.0f) torque = 250.0f;
 
-	if (speedMax <= 0.0f) speedMax = 3000.0f;
+	if (speedMax <= 0.0f) speedMax = 2500.0f;
 	if (accelerationRate <= 0.0f) accelerationRate = 0.008f;
 	if (accelerationDecay <= 0.0f) accelerationDecay = 50.0f;
-	if (traction <= 0.0f) traction = 100.0f;
+	if (traction <= 0.0f) traction = 135.0f;
 	if (handling <= 0.0f) handling = 50.0f;
+	if (turncoefficient <= 0.0f) turncoefficient = 1.34f;
 
 	lapCounter = 0;
 	timeElapsedLin = 1.0f;
@@ -49,6 +50,8 @@ void AVehicleBase::BeginPlay()
 	driftGrip = 1.0f;
 	climbSpeed = 0.5f;
 	initialTraction = traction;
+	speedMaxOriginal = speedMax;
+	turncOriginal = turncoefficient;
 	isGrounded = true;
 }
 
@@ -183,7 +186,7 @@ void AVehicleBase::Turn(float value_)
 		turningRate = 0.0f;
 	}
 	else {
-		turningRate = GetSpeed() / speedMax;
+		turningRate = (GetSpeed() * (turncoefficient * 1.34)) / speedMax;
 	}
 
 	//Rotation when moving forward
@@ -240,7 +243,7 @@ void AVehicleBase::Jump()
 {
 	//Can jump only when on the ground
 	if (isGrounded) {
-		jumpForce.Z = 60000.0 / mass;
+		jumpForce.Z = 85000.0 / mass;
 
 		isJumping = true;
 		timeElapsedAir = 0.0f;
@@ -288,6 +291,12 @@ float AVehicleBase::GetSpeed()
 {
 	return FMath::Sqrt((CarMesh->GetComponentVelocity().X * CarMesh->GetComponentVelocity().X)
 		+ (CarMesh->GetComponentVelocity().Y * CarMesh->GetComponentVelocity().Y));
+}
+
+void AVehicleBase::SetSpeedMax(float value_)
+{
+	if (value_ > 0.0f) speedMax = value_;
+
 }
 
 void AVehicleBase::SetPosition(FVector vec_)
@@ -418,6 +427,18 @@ inline void AVehicleBase::SetAccelerationDecay(float value_)
 inline float AVehicleBase::GetAccelerationDecay()
 {
 	return accelerationDecay;
+}
+
+void AVehicleBase::SetTurnCoefficient(float value_)
+{
+	if (value_ >= 0.9f && value_ <= 2.0f) {turncoefficient = value_;}
+	else {turncoefficient = 1.34f;}
+
+}
+
+inline float AVehicleBase::GetTurnCoefficient()
+{
+	return turncoefficient;
 }
 
 bool AVehicleBase::isMovingForward()
