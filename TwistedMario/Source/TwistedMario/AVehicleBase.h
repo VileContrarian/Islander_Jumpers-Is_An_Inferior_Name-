@@ -69,6 +69,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float speedMax;
 
+	//Takes the default speed value in so any changes to the MaxSpeed can be rectified .
+	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
+		float speedMaxOriginal;
+
 	//Value should be between 0 and 1, where 1 means that it gains its max speed in almost one second
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float accelerationRate;
@@ -87,6 +91,15 @@ public:
 	//Shouldn't be less than 1.0f [Default 50.0f (max: 50.0f)]
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float handling;
+
+	//The higher the turning coefficient is past 1.0, the sharper turns will be for the vehicle
+	// The opposite is true when you go under 1.0[Default 1.34f (max: 2.0f)(min: 0.9f)]
+	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
+		float turncoefficient;
+
+	//Takes the default turncoefficient value in so any changes to the MaxSpeed can be rectified .
+	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
+		float turncOriginal;
 
 	//Affects drifting
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
@@ -220,6 +233,15 @@ public:
 		float GetAccelerationDecay();
 
 	UFUNCTION(BlueprintCallable)
+		void SetTurnCoefficient(float value_);
+
+	UFUNCTION(BlueprintPure)
+		float GetTurnCoefficient();
+
+	UFUNCTION(BlueprintCallable)
+		void SetSpeedMax(float value_);
+
+	UFUNCTION(BlueprintCallable)
 		void Teleport(FVector outDirection);
 
 private:
@@ -272,10 +294,7 @@ private:
 	bool isTurning;
 	bool isJumping;
 	float initialTraction;
-
 	bool isMovingForward();
-	FVector FindLeftVector();
-	FVector FindRightVector();
 	float FindAngle(FVector vecA, FVector vecB);
 
 	/// Debug Tools
