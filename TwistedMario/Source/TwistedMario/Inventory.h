@@ -12,14 +12,17 @@ class TWISTEDMARIO_API AInventory : public AActor
 {
 	GENERATED_BODY()
 	
-public:	
+public:
 	// Sets default values for this actor's properties
 	AInventory();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+		USceneComponent* root;
 
 private:
 
 	UPROPERTY(EditAnywhere, Category = "Inventory Defaults")
-		AItem* inventorySlot; // Holds an item in the inventory slot.
+		TSubclassOf<AItem> inventorySlot; // Holds an item in the inventory slot.
 
 protected:
 	// Called when the game starts or when spawned
@@ -30,10 +33,18 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	// Add an Item to the inventory slot, doesn't override if the slot is already taken.
-	void AddToInventory(AItem* item_);
+	UFUNCTION(BlueprintCallable)
+		void AddToInventory(TSubclassOf<AItem> item_);
 	// Remove an Item from the inventory slot.
-	void RemoveFromInventory();
+	UFUNCTION(BlueprintCallable)
+		void RemoveFromInventory();
 	// Uses the item in the inventory.
-	void UseItem(APawn* user);
+	UFUNCTION(BlueprintCallable)
+		void UseItem(APawn* User);
+
+	// GETTERS
+	
+	UFUNCTION(BlueprintCallable)
+		TSubclassOf<AItem> GetItem() { return inventorySlot; }
 
 };

@@ -13,6 +13,7 @@ AVehicleBase::AVehicleBase()
 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	//inventory = CreateDefaultSubobject<UInventoryComponent>(TEXT("Inventory"));
 }
 
 // Called when the game starts or when spawned
@@ -29,7 +30,7 @@ void AVehicleBase::BeginPlay()
 	if (defense <= 0) defense = 1;
 
 	if (force <= 0.0f) force = 10000.0f;
-	if (torque <= 0.0f) torque = 250.0f;
+	if (torque <= 0.0f) torque = 700.0f;
 
 	if (speedMax <= 0.0f) speedMax = 3000.0f;
 	if (accelerationRate <= 0.0f) accelerationRate = 0.008f;
