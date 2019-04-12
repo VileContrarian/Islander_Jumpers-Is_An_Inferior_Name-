@@ -39,7 +39,7 @@ void AVehicleBase::BeginPlay()
 	if (traction <= 0.0f) traction = 100.0f;
 	if (handling <= 0.0f) handling = 50.0f;
 
-	if (turncoefficient < 0.86f) turncoefficient = 1.34f;
+	if (turncoefficient <= 0.0f) turncoefficient = 1.34f;
 
 	lapCounter = 0;
 	timeElapsedLin = 1.0f;
@@ -431,7 +431,7 @@ inline float AVehicleBase::GetAccelerationDecay()
 
 void AVehicleBase::SetTurnCoefficient(float value_)
 {
-	if (value_ >= 0.86f && value_ <= 2.0f) { turncoefficient = value_; }
+	if (value_ >= 0.9f && value_ <= 2.0f) { turncoefficient = value_; }
 	else { turncoefficient = 1.34f; }
 
 }
