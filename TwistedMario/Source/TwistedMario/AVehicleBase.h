@@ -93,7 +93,7 @@ public:
 		float handling;
 
 	//The higher the turning coefficient is past 1.0, the sharper turns will be for the vehicle
-	// The opposite is true when you go under 1.0[Default 1.34f (max: 2.0f)(min: 0.9f)]
+	// The opposite is true when you go under 1.0[Default 1.34f (max: 2.0f)(min: 0.86f)]
 	UPROPERTY(EditAnywhere, Category = "Attributes", BlueprintReadWrite)
 		float turncoefficient;
 
