@@ -6,16 +6,18 @@
 #include "Item.h"
 #include "HealthPack.generated.h"
 
+/**
+ * 
+ */
 UCLASS()
 class TWISTEDMARIO_API AHealthPack : public AItem
 {
 	GENERATED_BODY()
 
 public:
-	AHealthPack();
 
 	void UseItem(APawn *User) override;
 
 	UPROPERTY(BlueprintReadWrite, Category = "Health")
-		float healthToAdd = 10;
+	float healthToAdd = 10;
 };
