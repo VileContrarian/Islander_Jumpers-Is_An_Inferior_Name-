@@ -42,7 +42,7 @@ public:
 	
 	UFUNCTION(Blueprintcallable, Category = "Checkpoints")
 	uint8 getIndex();
-
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
