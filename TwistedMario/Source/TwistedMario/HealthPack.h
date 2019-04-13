@@ -17,5 +17,5 @@ public:
 	void UseItem(APawn *User) override;
 
 	UPROPERTY(BlueprintReadWrite, Category = "Health")
-		float healthToAdd = 10.0f;
+		float healthToAdd = 10;
 };
