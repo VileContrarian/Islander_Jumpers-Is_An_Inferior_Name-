@@ -1,35 +1,36 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "inventory.h"
+#include "InventoryComponent.h"
 
-// Sets default values
-AInventory::AInventory()
+// Sets default values for this component's properties
+UInventoryComponent::UInventoryComponent()
 {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+	// off to improve performance if you don't need them.
+	PrimaryComponentTick.bCanEverTick = true;
 
-	root = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
-	SetRootComponent(root);
-
-	inventorySlot = nullptr; // Make sure the inventory slot is empty.
-
+	// ...
 }
 
-// Called when the game starts or when spawned
-void AInventory::BeginPlay()
+// Called when the game starts
+void UInventoryComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
+	// ...
+	
 }
 
 // Called every frame
-void AInventory::Tick(float DeltaTime)
+void UInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
-	Super::Tick(DeltaTime);
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	// ...
 }
 
-void AInventory::AddToInventory(TSubclassOf<AItem> item_) {
+
+void UInventoryComponent::AddToInventory(TSubclassOf<AItem> item_) {
 
 	// Check to see if something is already in the inventory slot.
 	if (!inventorySlot)
@@ -37,12 +38,15 @@ void AInventory::AddToInventory(TSubclassOf<AItem> item_) {
 
 }
 
-void AInventory::RemoveFromInventory() {
+void UInventoryComponent::RemoveFromInventory() {
 	// Deletes the item in inventory and sets it to nullptr.
 	/// I'm not sure if this is needed due to the fact that Unreal has it's own memory management, leaving it here until I can confrim.
+	delete inventorySlot;
+	inventorySlot = nullptr;
+
 }
 
-void AInventory::UseItem(APawn* User) {
+void UInventoryComponent::UseItem(APawn* User) {
 
 	/// Note:
 	/// I designed this so people wouldn't need to remember to burn a charge on an item.
