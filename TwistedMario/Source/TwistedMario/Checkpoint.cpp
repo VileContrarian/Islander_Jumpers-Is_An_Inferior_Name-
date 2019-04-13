@@ -19,13 +19,9 @@ ACheckpoint::ACheckpoint()
 
 void ACheckpoint::onCrossLine(AVehicleBase *vehicle)
 {
-	// check if the player has crossed the checkpoint (in the correct order)
-	if (vehicle->location == (index - 1)) {
-		vehicle->location = index; // set the current location to the chackpoint's index
 
 	// check if the player has crossed the finish line
-	}
-	else if (vehicle->location == (index - 1) && Finishline) {
+	if (vehicle->location == (index - 1) && isFinishLine) {
 
 		vehicle->lapCounter++; // increment the lap
 		vehicle->location = 0; // reset the location (index)
@@ -35,6 +31,11 @@ void ACheckpoint::onCrossLine(AVehicleBase *vehicle)
 		if (vehicle->lapCounter == 4) {
 			// finish race
 		}
+	}
+
+	// check if the player has crossed the checkpoint (in the correct order)
+	if (vehicle->location == (index - 1)) {
+		vehicle->location = index; // set the current location to the checkpoint's index
 	}
 }
 

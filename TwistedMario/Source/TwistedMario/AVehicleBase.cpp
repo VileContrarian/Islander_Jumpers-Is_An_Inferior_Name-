@@ -39,6 +39,8 @@ void AVehicleBase::BeginPlay()
 	if (traction <= 0.0f) traction = 100.0f;
 	if (handling <= 0.0f) handling = 50.0f;
 
+	if (turncoefficient <= 0.0f) turncoefficient = 1.34f;
+
 	lapCounter = 0;
 	timeElapsedLin = 1.0f;
 	timeElapsedRot = 1.0f;
@@ -49,6 +51,8 @@ void AVehicleBase::BeginPlay()
 	driftGrip = 1.0f;
 	climbSpeed = 0.5f;
 	initialTraction = traction;
+	speedMaxOriginal = speedMax;
+	turncOriginal = turncoefficient;
 	isGrounded = true;
 }
 
@@ -183,7 +187,7 @@ void AVehicleBase::Turn(float value_)
 		turningRate = 0.0f;
 	}
 	else {
-		turningRate = GetSpeed() / speedMax;
+		turningRate = (GetSpeed() * (turncoefficient * 1.34)) / speedMax;
 	}
 
 	//Rotation when moving forward
@@ -202,7 +206,7 @@ void AVehicleBase::Turn(float value_)
 
 		velAngular.X = 0.0f;
 		velAngular.Y = 0.0f;
-		velAngular.Z = -(torque / mass) * turningDir * (turningRate + 0.75f);
+		velAngular.Z = -(torque / mass) * turningDir * (turningRate * 2.0f);
 
 
 		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular);
@@ -290,6 +294,11 @@ float AVehicleBase::GetSpeed()
 		+ (CarMesh->GetComponentVelocity().Y * CarMesh->GetComponentVelocity().Y));
 }
 
+void AVehicleBase::SetSpeedMax(float value_)
+	{
+		if (value_ > 0.0f) speedMax = value_;
+	}
+
 void AVehicleBase::SetPosition(FVector vec_)
 {
 	if (CarMesh == nullptr) return;
@@ -354,7 +363,7 @@ void AVehicleBase::SetMass(float value_)
 	if (value_ > 0.0f) mass = value_;
 }
 
-inline float AVehicleBase::GetMass()
+float AVehicleBase::GetMass()
 {
 	if (CarMesh == nullptr) return 0.0f;
 	return CarMesh->GetMass();
@@ -420,6 +429,18 @@ inline float AVehicleBase::GetAccelerationDecay()
 	return accelerationDecay;
 }
 
+void AVehicleBase::SetTurnCoefficient(float value_)
+{
+	if (value_ >= 0.9f && value_ <= 2.0f) { turncoefficient = value_; }
+	else { turncoefficient = 1.34f; }
+
+}
+
+inline float AVehicleBase::GetTurnCoefficient()
+{
+	return turncoefficient;
+}
+
 bool AVehicleBase::isMovingForward()
 {
 	if (CarMesh == nullptr) return false;
@@ -430,28 +451,6 @@ bool AVehicleBase::isMovingForward()
 	if (directionMag > 0.0f) return true; //Vehicle is moving forward
 
 	return false;
-}
-
-FVector AVehicleBase::FindLeftVector()
-{
-	FVector forwardVel = CarMesh->GetComponentVelocity();
-	FVector perpVector;
-
-	perpVector.X = -forwardVel.Y;
-	perpVector.Y = forwardVel.X;
-
-	return perpVector;
-}
-
-FVector AVehicleBase::FindRightVector()
-{
-	FVector forwardVel = CarMesh->GetComponentVelocity();
-	FVector perpVector;
-
-	perpVector.X = forwardVel.Y;
-	perpVector.Y = -forwardVel.X;
-
-	return perpVector;
 }
 
 float AVehicleBase::FindAngle(FVector vecA, FVector vecB)
@@ -465,4 +464,9 @@ float AVehicleBase::FindAngle(FVector vecA, FVector vecB)
 	angle = FMath::RadiansToDegrees(angle);
 
 	return angle;
+}
+
+void AVehicleBase::Teleport(FVector outDirection) {
+	float magnitude = CarMesh->GetPhysicsLinearVelocity().Size();
+	CarMesh->SetPhysicsLinearVelocity(outDirection * magnitude);
 }

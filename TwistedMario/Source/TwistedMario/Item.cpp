@@ -5,8 +5,17 @@
 // Sets default values
 AItem::AItem()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	root = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+	SetRootComponent(root);
+
+	mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+	mesh->SetupAttachment(root);
+
+	collider = CreateDefaultSubobject<USphereComponent>(TEXT("Collider"));
+	collider->SetupAttachment(root);
 
 }
 
@@ -14,7 +23,7 @@ AItem::AItem()
 void AItem::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 // Called every frame
@@ -24,7 +33,6 @@ void AItem::Tick(float DeltaTime)
 
 }
 
-void AItem::UseItem(APawn *User)
-{
-}
+void AItem::UseItem(APawn *User) {
 
+}

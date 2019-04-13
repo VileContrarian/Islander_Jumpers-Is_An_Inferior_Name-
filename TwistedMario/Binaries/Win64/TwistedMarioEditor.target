@@ -18,6 +18,7 @@
 	"Launch": "$(EngineDir)/Binaries/Win64/UE4Editor.exe",
 	"BuildProducts": [
 		{
+<<<<<<< HEAD
 			"Path": "$(EngineDir)/Binaries/Win64/UE4Editor.exe",
 			"Type": "Executable"
 		},
@@ -4082,6 +4083,14 @@
 		{
 			"Path": "$(EngineDir)/Content/Slate/CrashTracker/MouseCursor.png",
 			"Type": "UFS"
+=======
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-TwistedMario-1075.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-TwistedMario-1075.pdb",
+			"Type": "SymbolFile"
+>>>>>>> 25ed32ade7ea7528289f14a1f1a4348e99d4ee28
 		},
 		{
 			"Path": "$(EngineDir)/Content/Slate/CrashTracker/Record.png",
