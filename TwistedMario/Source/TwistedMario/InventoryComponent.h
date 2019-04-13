@@ -3,21 +3,19 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/ActorComponent.h"
 #include "Item.h"
-#include "GameFramework/Actor.h"
-#include "Inventory.generated.h"
+#include "InventoryComponent.generated.h"
 
-UCLASS()
-class TWISTEDMARIO_API AInventory : public AActor
+
+UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+class TWISTEDMARIO_API UInventoryComponent : public UActorComponent
 {
 	GENERATED_BODY()
-	
-public:
-	// Sets default values for this actor's properties
-	AInventory();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-		USceneComponent* root;
+public:	
+	// Sets default values for this component's properties
+	UInventoryComponent();
 
 private:
 
@@ -25,12 +23,12 @@ private:
 		TSubclassOf<AItem> inventorySlot; // Holds an item in the inventory slot.
 
 protected:
-	// Called when the game starts or when spawned
+	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:
+public:	
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	// Add an Item to the inventory slot, doesn't override if the slot is already taken.
 	UFUNCTION(BlueprintCallable)
@@ -43,8 +41,9 @@ public:
 		void UseItem(APawn* User);
 
 	// GETTERS
-	
-	UFUNCTION(BlueprintCallable)
-		TSubclassOf<AItem> GetItem() { return inventorySlot; }
 
+	UFUNCTION(BlueprintCallable)
+		inline AItem* GetItem() { return Cast<AItem>(inventorySlot); }
+
+		
 };

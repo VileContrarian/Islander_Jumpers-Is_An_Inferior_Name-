@@ -3,8 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Checkpoint.h"
 #include "GameFramework/Pawn.h"
+#include "Checkpoint.h"
+#include "InventoryComponent.h"
 #include "AVehicleBase.generated.h"
 
 /*
@@ -36,6 +37,12 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		class UStaticMeshComponent* CarMesh;
+
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		//AInventory* inventory;
+
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		//UInventoryComponent* inventory;
 
 	///Variables
 	///Vehicle Attributes
