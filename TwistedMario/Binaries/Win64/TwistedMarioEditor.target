@@ -6,8 +6,8 @@
 	{
 		"MajorVersion": 4,
 		"MinorVersion": 21,
-		"PatchVersion": 1,
-		"Changelist": 4613538,
+		"PatchVersion": 2,
+		"Changelist": 4753647,
 		"CompatibleChangelist": 4541578,
 		"IsLicenseeVersion": 0,
 		"IsPromotedBuild": 1,
@@ -18,11 +18,11 @@
 	"Launch": "$(EngineDir)/Binaries/Win64/UE4Editor.exe",
 	"BuildProducts": [
 		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-TwistedMario-627.dll",
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-TwistedMario-6730.dll",
 			"Type": "DynamicLibrary"
 		},
 		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-TwistedMario-627.pdb",
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-TwistedMario-6730.pdb",
 			"Type": "SymbolFile"
 		},
 		{
