@@ -65,14 +65,14 @@ void AVehicleBase::Tick(float DeltaTime)
 	FRotator debugVel;
 	debugVel = CarMesh->GetComponentRotation();
 	UE_LOG(LogWindows, Warning, TEXT("Velocity : %f, %f, %f"), debugVel.Roll, debugVel.Pitch, debugVel.Yaw)
-	//UE_LOG(LogWindows, Warning, TEXT("Velocity : %f, %f, %f"), sideForce.X, sideForce.Y, sideForce.Z)
+	UE_LOG(LogWindows, Warning, TEXT("Speed,Vel : %f, %f, %f"), GetSpeed(), sideForce.X, sideForce.Z)
 	*/
 
 	/*
 	FString TheFloatStr = FString::SanitizeFloat(angleDeviation); //Convert float to string
 
 	if (GEngine) {
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Blue, TEXT(""));
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Blue, TEXT("HEY"));
 	}
 	*/
 }
@@ -218,13 +218,13 @@ void AVehicleBase::Turn(float value_)
 			velAngular.Z /= timeElapsedRot;
 		}
 
-		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular, true);
+		CarMesh->SetPhysicsAngularVelocityInRadians(velAngular, false);
 	}
 
 	if (handling > handlingRange) handling = handlingRange;
 	if (handling <= 0.0f) handling = SMALLVAL;
 
-	timeElapsedRot += FApp::GetFixedDeltaTime() / (handlingRange / handling);
+	timeElapsedRot += FApp::GetFixedDeltaTime() / (handlingRange / handling) * 2.0f;
 
 	//return velAngular;
 }
